@@ -105,8 +105,8 @@ class MyDataset(Dataset):
         self.mode = mode
         self.tokenizer = AutoTokenizer.from_pretrained("bigscience/T0pp" if "T5" in model_name else model_name)
         #self.tokenizer = self.tokenizer.add_tokens(['<S>','<Q>','<A>'])
-        #print(len([x for x in self.data_lang if x[-1]==""]))
-        #print(len([x for x in self.data_lang if x[-1]!=""]))
+        #print(len([x for x in self.data_lang if x[-2]==""]))
+        #print(len([x for x in self.data_lang if x[-2]!=""]))
         #print(len(self.data_lang))
     def __len__(self):
         return len(self.data_all) if self.mode=="pretrain" else len(self.data_lang)
@@ -142,7 +142,7 @@ for cross_val_split_idx in range(5):
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
-    print(len(val_dataset), len(dev_dataset)) #18996 6254
+    print(len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
     ## Set Model
     if model_name == "facebook/bart-large-mnli":
         model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
@@ -152,6 +152,8 @@ for cross_val_split_idx in range(5):
     loss = torch.nn.CrossEntropyLoss()
     ep = 4
     model_ckpts = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI"+("_def" if use_def else "")+".pt"
+    if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
+        os.system("mkir ckpts/"+str(cross_val_split_idx))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
     for (mode, tot_eps, dataloader) in [\
             ("train",8,train_dataloader), ("val",1 if (cross_val or \
