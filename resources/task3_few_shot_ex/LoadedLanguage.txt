@@ -1,0 +1,23 @@
+Sentence: "Abrams remained about 18,000 votes short of a result that would have required a runoff between her and Kamp in December."
+Is this an example of Loaded Language? Yes or No: No
+
+Sentence: "How stupid and petty things have become in Washington"
+Is this an example of Loaded Language? Yes or No: Yes
+
+Sentence: "If Napoleon said so it must be true then."
+Is this an example of Loaded Language? Yes or No: No
+
+Sentence: "They keep feeding these people with trash. They should stop."
+Is this an example of Loaded Language? Yes or No: Yes
+
+Sentence: "They laughed when he announced his candidacy. They thought he was just some kind of a circus sideshow act. They couldn’t have been more wrong."
+Is this an example of Loaded Language? Yes or No: No
+
+Sentence: "I will say this, look, nobody believes in the First Amendment more than I do and if I think somebody is acting out of sorts I will leave," Trump continued. "I will say thank you very much everybody, I appreciate you coming and I’ll leave. And those reporters will not be too friendly to whoever it is that’s acting up."
+Is this an example of Loaded Language? Yes or No: No
+
+Sentence: "This is a disgrace."
+Is this an example of Loaded Language? Yes or No: Yes
+
+Sentence: "So, Fox joins with the least trusted name in news, the Clown News Network, to go after the White House on something that is the White House's prerogative and claim it's about free press. It's not."
+Is this an example of Loaded Language? Yes or No: 
