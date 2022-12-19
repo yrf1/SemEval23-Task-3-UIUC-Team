@@ -11,6 +11,7 @@ Above with definitions: micro-F1=0.47917	macro-F1=0.90273
 On top 8: micro-F1=0.45370       macro-F1=0.79689
 """
 import os
+import sys
 import torch
 import random
 import pandas as pd
@@ -27,7 +28,7 @@ accelerator = Accelerator()
 lang = "en"
 lrate = 1e-6
 use_def = True #
-skip_train = True #
+skip_train = sys.argv[1].lower() == 'true'
 cross_val = False #
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
@@ -77,11 +78,6 @@ class MyDataset(Dataset):
                         if mode=="val":        
                             lbls_GT_here = labels[(labels[0]==int(d[0])) & (labels[1]==int(d[1]))][2].values[0]
                             lbls_GT_here = [] if lbls_GT_here!=lbls_GT_here else lbls_GT_here.split(",")
-                        #if cccount < 20 or mode=="test":
-                        #    if len(lbls_GT_here)>0 and mode=="val":
-                        #        if lbl in lbls_GT_here:
-                        #            print(d[0],d[1],lbls_GT_here)
-                        #            cccount += 1
                         self.data_lang.append((d[0],d[1],d[2],lbl,lbls_GT_here))
             if mode in ["pretrain","train"]:
                 for idx, data in labels.iterrows():
@@ -126,9 +122,6 @@ class MyDataset(Dataset):
             with open("resources/task3_few_shot_ex/"+propaganda+".txt", "r") as f:
                 txt = f.read()
             txt = txt.replace("<QUERY>", txt1)
-            #if propaganda in this_all_labels:
-            #    print("~~~~~~~~~~~~")
-            #    print(txt)
             txt = self.tokenizer(txt, return_tensors="pt", pad_to_max_length=True, max_length=128)
         txt["input_ids"] = txt["input_ids"].squeeze(0).to(device)
         txt["attention_mask"] = txt["attention_mask"].squeeze(0).to(device)
@@ -147,8 +140,6 @@ for cross_val_split_idx in range(5):
     train_dataloader = DataLoader(train_dataset, batch_size=8, shuffle=True)
     val_dataset = MyDataset("val", cross_val_split_idx, all_labels=train_dataset.all_labels)
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
-    #for idx, data in enumerate(val_dataset):
-    #    pass
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
     print(len(val_dataset), len(dev_dataset)) #18996 6254
@@ -189,7 +180,6 @@ for cross_val_split_idx in range(5):
                     elif model_name == "t5-large":
                         pred_y = model.generate(x["input_ids"], max_length=4)
                         pred_y = dataloader.dataset.tokenizer.decode(pred_y[0], skip_special_tokens=True)
-                        print(pred_y, y)
                         pred_y = 2 if "yes" in pred_y.lower() else 0
                 if mode in ["val"]:
                     if fname not in train_results_tracker:
