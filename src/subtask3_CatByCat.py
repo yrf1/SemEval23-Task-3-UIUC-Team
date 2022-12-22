@@ -153,7 +153,7 @@ for cross_val_split_idx in range(5):
     ep = 4
     model_ckpts = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI"+("_def" if use_def else "")+".pt"
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
-        os.system("mkir ckpts/"+str(cross_val_split_idx))
+        os.system("mkdir ckpts/"+str(cross_val_split_idx))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
     for (mode, tot_eps, dataloader) in [\
             ("train",8,train_dataloader), ("val",1 if (cross_val or \
