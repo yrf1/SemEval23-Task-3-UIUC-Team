@@ -8,7 +8,7 @@ python src/subtask3_CatByCat.py False
 python src/subtask3_CatByCat.py True
 ```
 
-|       | SubTask II |  | SubTask III |
+|       | SubTask II |  SubTask III |
 | ----------- | ----------- | ----------- |
 | Baseline      | 0.605       | 0.16125 |
 | Bart-mnli-wDef   | 0.71       | 0.34955 |
