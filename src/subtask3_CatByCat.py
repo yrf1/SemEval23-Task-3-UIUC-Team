@@ -26,7 +26,7 @@ accelerator = Accelerator()
 
 ## Initialize Settings
 lang = "en"
-lrate = 1e-6
+lrate = 5e-6 #1e-6 has final loss of 0.1236
 use_def = True #
 skip_train = sys.argv[1].lower() == 'true'
 cross_val = False #
@@ -41,7 +41,7 @@ task_label_fname_dev = "dev-labels-subtask-3.txt"
 df = pd.read_csv("data/en/"+task_label_fname_train, sep="\t",header=None)[2].values
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
-print(label_count)
+
 LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
         'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
 if model_name == "t5-large":
