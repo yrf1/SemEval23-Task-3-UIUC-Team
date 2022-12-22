@@ -30,7 +30,7 @@ accelerator = Accelerator()
 ## Initialize Settings
 lang = "en"
 lrate = 5e-6
-use_def = True #
+use_def = False #
 skip_train = False #
 cross_val = True #
 device = "cuda" if torch.cuda.is_available() else "cpu"
