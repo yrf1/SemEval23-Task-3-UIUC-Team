@@ -1,0 +1,19 @@
+Appeal to Hypocrisy: The target of the technique is attacked on its reputation by charging them with hypocrisy or inconsistency. This can be done explicitly by calling out hypocrisy directly, or more implicitly by underlying the contradictions between different positions that were held or actions that were done in the past. A special way of calling out hypocrisy it by telling that someone who criticize you for something you did, also did it in the past, hence the names of this technique (which "also you" in Latin).
+
+<S>"A candidate talks about his opponent and says: Is he ready to be the Mayor?"
+<Q>Is this an example of Appeal to Hypocrisy? <A>No
+
+<S>"How can you demand that I eat less meat to reduce my carbon footprint if you yourself drive a big SUV and fly for holidays to Bali?"
+<Q>Is this an example of Appeal to Hypocrisy? <A>Yes
+
+<S>"Do you know who else was doing that? Hitler!"
+<Q>Is this an example of Appeal to Hypocrisy? <A>No
+
+<S>"My parents used to speed on the highway, so they don’t have any right to tell me to slow down."
+<Q>Is this an example of Appeal to Hypocrisy? <A>Yes
+
+<S>"Patriotism mean no questions."
+<Q>Is this an example of Appeal to Hypocrisy? <A>No
+
+<S>"<QUERY>"
+<Q>Is this an example of Appeal to Hypocrisy? <A>
