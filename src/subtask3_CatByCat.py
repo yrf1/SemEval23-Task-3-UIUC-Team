@@ -19,7 +19,7 @@ from datetime import datetime
 from collections import Counter
 from accelerate import Accelerator
 from torch.utils.data import Dataset, DataLoader
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, T5ForConditionalGeneration
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 
 accelerator = Accelerator()
@@ -28,7 +28,7 @@ accelerator = Accelerator()
 lang = "en"
 lrate = 5e-6 
 use_def = True 
-skip_train = sys.argv[1].lower() == 'true'
+skip_train = True
 cross_val = False 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
@@ -41,8 +41,7 @@ df = pd.read_csv("data/en/"+task_label_fname_train, sep="\t",header=None)[2].val
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
 
-LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
-        'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
+LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", 'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
 
 LABELS_OF_INTEREST_pos_counter = {}
 LABELS_OF_INTEREST_neg_counter = {}
@@ -53,20 +52,20 @@ LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
 class MyDataset(Dataset):
     def __init__(self, mode="train", cross_val_split_idx=-1, all_labels=None):
         self.data_all, self.data_lang = [], []
-        task_label_fname = task_label_fname_train if mode in \
-                        ["train","pretrain","val"] else task_label_fname_dev
+        task_label_fname = task_label_fname_train if mode in ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
         for lang_dir in os.listdir(data_dir):
-            labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
-                     if mode in ["train","pretrain","val"] else None
+            labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) if mode in ["train","pretrain","val"] else None
             with open(data_dir+"/"+lang_dir+"/"+task_label_fname.replace(".txt",".template"), "r") as f:
                 seg_data = f.read()
+                # open template file for each (current) language
+                # ['261', '1', 'Lo strano silenzio d...-lockdown ']
                 seg_data = [x.split("\t") for x in seg_data.split("\n")[:-1]]
             seg_map = {}
             for d in seg_data:
                 if d[0] not in seg_map:
                     seg_map[d[0]] = {}
-                seg_map[d[0]][d[1]] = d[-1]
+                seg_map[d[0]][d[1]] = d[-1] # {'261': {'1': 'Lo strano silenzio d...-lockdown '}}
                 if mode in ["val","dev"] and lang_dir==lang:
                     for lbl in LABELS_OF_INTEREST:
                         lbls_GT_here = []
@@ -116,9 +115,6 @@ class MyDataset(Dataset):
         #print(fname, segID, txt1, label.item())
         return fname, segID, txt, propaganda_idx, label
 
-#pretrain_dataset = MyDataset("pretrain") 
-#pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=4, shuffle=True)
-
 train_results_tracker, dev_results_tracker  = {}, {}
 for cross_val_split_idx in range(5):
     print(cross_val_split_idx, datetime.now())
@@ -128,10 +124,10 @@ for cross_val_split_idx in range(5):
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
-    print(len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
-    ## Set Model
+    print(len(train_dataset), len(val_dataset), len(dev_dataset)) # 11591 85482 28143
+   
+    # Set Model
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
     ep = 4
@@ -186,12 +182,10 @@ for fname, v in train_results_tracker.items():
     for segID, pred_y in v.items():
         data.append((fname[0], segID[0], ",".join(pred_y)))
 train_results_tracker = pd.DataFrame(data)
-train_results_tracker.to_csv("baselines/our-train-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
-    sep="\t", index=None, header=None)
+train_results_tracker.to_csv("baselines/our-train-output-subtask3-"+lang+("_def" if use_def else "")+".txt", sep="\t", index=None, header=None)
 data = []
 for fname, v in dev_results_tracker.items():
     for segID, pred_y in v.items():
         data.append((fname[0], segID[0], ",".join(pred_y)))
 dev_results_tracker = pd.DataFrame(data)
-dev_results_tracker.to_csv("baselines/our-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
-    sep="\t", index=None, header=None)
+dev_results_tracker.to_csv("baselines/our-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", sep="\t", index=None, header=None)
