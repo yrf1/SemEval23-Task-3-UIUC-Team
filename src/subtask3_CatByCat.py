@@ -26,14 +26,13 @@ accelerator = Accelerator()
 
 ## Initialize Settings
 lang = "en"
-lrate = 5e-6 #1e-6 has final loss of 0.1236
-use_def = True #
+lrate = 5e-6 
+use_def = True 
 skip_train = sys.argv[1].lower() == 'true'
-cross_val = False #
+cross_val = False 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
 model_name = "facebook/bart-large-mnli"
-#model_name, skip_train, cross_val, use_def, device = "t5-large", True, False, False, "cuda"
 task_dir_train = "train-articles-subtask-3"
 task_label_fname_train = "train-labels-subtask-3.txt"
 task_dir_dev = "dev-articles-subtask-3"
@@ -44,9 +43,7 @@ label_count = Counter([y for x in df for y in x.split(",")])
 
 LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
         'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
-if model_name == "t5-large":
-    LABELS_OF_INTEREST = ['Appeal_to_Hypocrisy', 'Obfuscation-Vagueness-Confusion'] #, \
-                          #'Whataboutism', 'Appeal_to_Popularity', 'Straw_Man']
+
 LABELS_OF_INTEREST_pos_counter = {}
 LABELS_OF_INTEREST_neg_counter = {}
 
@@ -56,11 +53,9 @@ LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
 class MyDataset(Dataset):
     def __init__(self, mode="train", cross_val_split_idx=-1, all_labels=None):
         self.data_all, self.data_lang = [], []
-        task_dir = task_dir_train if mode in ["train","pretrain","val"] else task_dir_dev
         task_label_fname = task_label_fname_train if mode in \
                         ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
-        cccount = 0
         for lang_dir in os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
@@ -103,26 +98,17 @@ class MyDataset(Dataset):
         if mode=="train":
             del self.data_all[cross_val_split_idx::5]
         self.mode = mode
-        self.tokenizer = AutoTokenizer.from_pretrained("bigscience/T0pp" if "T5" in model_name else model_name)
-        #self.tokenizer = self.tokenizer.add_tokens(['<S>','<Q>','<A>'])
-        #print(len([x for x in self.data_lang if x[-2]==""]))
-        #print(len([x for x in self.data_lang if x[-2]!=""]))
-        #print(len(self.data_lang))
+        self.tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-mnli")
+
     def __len__(self):
         return len(self.data_all) if self.mode=="pretrain" else len(self.data_lang)
     def __getitem__(self, idx):
         fname, segID, txt1, propaganda, this_all_labels = self.data_all[idx] if self.mode=="pretrain" else self.data_lang[idx]
         txt2 = propaganda if propaganda!="" else random.choice([x for x in self.all_labels if x not in this_all_labels])
-        if model_name == "facebook/bart-large-mnli":
-            txt2_exp = txt2
-            if use_def:
-                txt2_exp = txt2+": "+LABELS_DEF[LABELS_DEF[0]==txt2][1].values[0]
-            txt = self.tokenizer(txt1, txt2_exp, return_tensors="pt", pad_to_max_length=True, max_length=128)
-        elif model_name == "t5-large":
-            with open("resources/task3_few_shot_ex/"+propaganda+".txt", "r") as f:
-                txt = f.read()
-            txt = txt.replace("<QUERY>", txt1)
-            txt = self.tokenizer(txt, return_tensors="pt", pad_to_max_length=True, max_length=128)
+        txt2_exp = txt2
+        if use_def:
+            txt2_exp = txt2+": "+LABELS_DEF[LABELS_DEF[0]==txt2][1].values[0]
+        txt = self.tokenizer(txt1, txt2_exp, return_tensors="pt", pad_to_max_length=True, max_length=128)
         txt["input_ids"] = txt["input_ids"].squeeze(0).to(device)
         txt["attention_mask"] = txt["attention_mask"].squeeze(0).to(device)
         label = torch.tensor(0 if (propaganda=="" or propaganda not in this_all_labels) else 2).to(device)
@@ -144,10 +130,8 @@ for cross_val_split_idx in range(5):
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
     print(len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
     ## Set Model
-    if model_name == "facebook/bart-large-mnli":
-        model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    if model_name == "t5-large":
-        model = T5ForConditionalGeneration.from_pretrained("bigscience/T0pp") #t5-large")
+    model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
+    
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
     ep = 4
@@ -155,12 +139,9 @@ for cross_val_split_idx in range(5):
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
         os.system("mkdir ckpts/"+str(cross_val_split_idx))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
-    for (mode, tot_eps, dataloader) in [\
-            ("train",8,train_dataloader), ("val",1 if (cross_val or \
-            model_name == "t5-large") else 0,val_dataloader), ("dev",1,dev_dataloader)]:
+    for (mode, tot_eps, dataloader) in [("train",8,train_dataloader), ("val",1 if cross_val else 0,val_dataloader), ("dev",1,dev_dataloader)]:
         if skip_train and mode=="train": 
-            if model_name == "facebook/bart-large-mnli":
-                model.load_state_dict(torch.load(model_ckpts))
+            model.load_state_dict(torch.load(model_ckpts))
             continue
         model, optim, dataloader = accelerator.prepare(model, optim, dataloader)
         if mode in ["dev","val","test"]:
@@ -169,20 +150,14 @@ for cross_val_split_idx in range(5):
             loss_tracker = []
             for idx, (fname, segID, x, prop_idx, y) in enumerate(dataloader):
                 optim.zero_grad()
-                if model_name == "facebook/bart-large-mnli":
-                    out = model(**x)
+                out = model(**x)
                 if mode in ["pretrain", "train"]:
                     loss_ = loss(out.logits, y)
                     loss_.backward()
                     loss_tracker.append(loss_.item())
                     optim.step()
                 if mode in ["val","dev"]:
-                    if model_name == "facebook/bart-large-mnli":
-                        pred_y = out.logits.argmax(1).item()
-                    elif model_name == "t5-large":
-                        pred_y = model.generate(x["input_ids"], max_length=4)
-                        pred_y = dataloader.dataset.tokenizer.decode(pred_y[0], skip_special_tokens=True)
-                        pred_y = 2 if "yes" in pred_y.lower() else 0
+                    pred_y = out.logits.argmax(1).item()
                 if mode in ["val"]:
                     if fname not in train_results_tracker:
                         train_results_tracker[fname] = {}
