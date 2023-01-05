@@ -110,7 +110,7 @@ class MyDataset(Dataset):
         txt = self.tokenizer(txt1, txt2_exp, return_tensors="pt", pad_to_max_length=True, max_length=128)
         txt["input_ids"] = txt["input_ids"].squeeze(0).to(device)
         txt["attention_mask"] = txt["attention_mask"].squeeze(0).to(device)
-        label = torch.tensor(0 if (propaganda=="" or propaganda not in this_all_labels) else 2).to(device)
+        label = torch.tensor(0 if (propaganda == "" or propaganda not in this_all_labels) else 2).to(device)
         propaganda_idx = torch.tensor(self.all_labels.index(txt2))
         #print(fname, segID, txt1, label.item())
         return fname, segID, txt, propaganda_idx, label
