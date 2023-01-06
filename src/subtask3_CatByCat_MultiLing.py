@@ -204,8 +204,8 @@ class MyDataset(Dataset):
         translated = self.mt_model.generate(**tokens)
         return [self.mt_tokenizer.decode(t, skip_special_tokens=True) for t in translated][0]
 
-pretrain_dataset = None #MyDataset("pretrain") 
-pretrain_dataloader = None #DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
+pretrain_dataset = MyDataset("pretrain") 
+pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
 #print(len(pretrain_dataset))
 
 train_results_tracker, dev_results_tracker  = {}, {}
@@ -214,10 +214,6 @@ for cross_val_split_idx in range(5):
     train_dataset = MyDataset("train", cross_val_split_idx)
     train_dataloader = DataLoader(train_dataset, batch_size=8, shuffle=True)
     val_dataset = MyDataset("val", cross_val_split_idx, all_labels=train_dataset.all_labels)
-    for i in range(len(val_dataset)):
-        val_dataset[i]
-        print(i)
-    quit()
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
