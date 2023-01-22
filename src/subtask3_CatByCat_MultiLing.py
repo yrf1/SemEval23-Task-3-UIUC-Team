@@ -36,15 +36,14 @@ from transformers import MarianMTModel, MarianTokenizer
 #lang = "en"
 lang = "it"
 lrate = 1e-5 #1e-6 has final loss of 0.1236
-use_def = True #
+use_def = True 
 MT_augment = True
 skip_train = sys.argv[1].lower() == 'true'
-cross_val = False #
+cross_val = False 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
 #model_name = "xlm-mlm-xnli15-1024" 
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" # Train: micro-F1=0.03161	macro-F1=0.06228 (?) #"facebook/bart-large-mnli"
-#model_name, skip_train, cross_val, use_def, device = "t5-large", True, False, False, "cuda"
 task_dir_train = "train-articles-subtask-3"
 task_label_fname_train = "train-labels-subtask-3.txt"
 task_dir_dev = "dev-articles-subtask-3"
@@ -122,25 +121,17 @@ class MyDataset(Dataset):
                 self.data_all = self.augment_data(self.data_all)
             if mode=="train":
                 self.data_lang = self.augment_data(self.data_lang)
-        #self.tokenizer = self.tokenizer.add_tokens(['<S>','<Q>','<A>'])
-        #print(len([x for x in self.data_lang if x[-2]==""]))
-        #print(len([x for x in self.data_lang if x[-2]!=""]))
-        #print(len(self.data_lang))
+
     def __len__(self):
         return len(self.data_all) if self.mode=="pretrain" else len(self.data_lang)
     def __getitem__(self, idx):
         fname, segID, txt1, propaganda, this_all_labels, ln = self.data_all[idx] if self.mode=="pretrain" else self.data_lang[idx]
         txt2 = propaganda if propaganda!="" else random.choice([x for x in self.all_labels if x not in this_all_labels])
-        #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
         txt2_exp = txt2
         if use_def:
             txt2_exp = txt2+": "+LABELS_DEF[LABELS_DEF[0]==txt2][1].values[0]
         txt = self.tokenizer(txt1, txt2_exp, return_tensors="pt", truncation_strategy="only_first", pad_to_max_length=True, max_length=128)
-        #elif model_name == "t5-large":
-        #    with open("resources/task3_few_shot_ex/"+propaganda+".txt", "r") as f:
-        #        txt = f.read()
-        #    txt = txt.replace("<QUERY>", txt1)
-        #    txt = self.tokenizer(txt, return_tensors="pt", pad_to_max_length=True, max_length=128)
+        
         txt["input_ids"] = txt["input_ids"].squeeze(0).to(device)
         txt["attention_mask"] = txt["attention_mask"].squeeze(0).to(device)
         txt['token_type_ids'] = txt['token_type_ids'].squeeze(0).to(device)
@@ -206,7 +197,6 @@ class MyDataset(Dataset):
 
 pretrain_dataset = MyDataset("pretrain") 
 pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
-#print(len(pretrain_dataset))
 
 train_results_tracker, dev_results_tracker  = {}, {}
 for cross_val_split_idx in range(5):
@@ -221,8 +211,7 @@ for cross_val_split_idx in range(5):
     ## Set Model
     #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
-    #if model_name == "t5-large":
-    #    model = T5ForConditionalGeneration.from_pretrained("bigscience/T0pp") #t5-large")
+    
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
     ep = 4
@@ -257,10 +246,7 @@ for cross_val_split_idx in range(5):
                 if mode in ["val","dev"]:
                     #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
                     pred_y = out.logits.argmax(1).item()
-                    #elif model_name == "t5-large":
-                    #    pred_y = model.generate(x["input_ids"], max_length=4)
-                    #    pred_y = dataloader.dataset.tokenizer.decode(pred_y[0], skip_special_tokens=True)
-                    #    pred_y = 2 if "yes" in pred_y.lower() else 0
+                    
                 if mode in ["val"]:
                     if fname not in train_results_tracker:
                         train_results_tracker[fname] = {}
@@ -276,9 +262,7 @@ for cross_val_split_idx in range(5):
                         dev_results_tracker[fname][segID] =[]
                     if pred_y>1: #TODO: 1 for bart-mNLI!!!
                         pred_y = dataloader.dataset.all_labels[prop_idx] 
-                        #if pred_y in dev_results_tracker[fname][segID]:
-                            #print("Check why the fuck")
-                            #quit()
+                  
                         dev_results_tracker[fname][segID].append(pred_y)
             if mode in ["pretrain", "train"]:
                 print(sum(loss_tracker)/len(loss_tracker))
