@@ -137,7 +137,11 @@ for cross_val_split_idx in range(5):
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
     for (mode, tot_eps, dataloader) in [("train",8,train_dataloader), ("val",1 if cross_val else 0,val_dataloader), ("dev",1,dev_dataloader)]:
         if skip_train and mode=="train": 
-            model.load_state_dict(torch.load(model_ckpts))
+            # fix this with cpu loading
+            if device == "cpu":
+                model.load_state_dict(torch.load(model_ckpts), map_location=torch.device('cpu'))
+            else:
+                model.load_state_dict(torch.load(model_ckpts))
             continue
         model, optim, dataloader = accelerator.prepare(model, optim, dataloader)
         if mode in ["dev","val","test"]:
