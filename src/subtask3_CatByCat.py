@@ -11,7 +11,6 @@ Above with definitions: micro-F1=0.47917	macro-F1=0.90273
 On top 8: micro-F1=0.45370       macro-F1=0.79689
 """
 import os
-import sys
 import torch
 import random
 import pandas as pd
