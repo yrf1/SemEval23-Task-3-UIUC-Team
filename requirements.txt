@@ -4,4 +4,4 @@ numpy
 pandas
 tqdm
 transformers
-googletrans
+googletrans==3.1.0a0 # it's important to get this version
