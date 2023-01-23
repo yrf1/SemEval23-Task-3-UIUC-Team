@@ -23,10 +23,8 @@ import random
 import pandas as pd
 from datetime import datetime
 from collections import Counter
-from accelerate import Accelerator
 from torch.utils.data import Dataset, DataLoader
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, T5ForConditionalGeneration
-from transformers import XLMTokenizer, XLMForSequenceClassification
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 
@@ -67,11 +65,9 @@ LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
 class MyDataset(Dataset):
     def __init__(self, mode="train", cross_val_split_idx=-1, all_labels=None):
         self.data_all, self.data_lang = [], []
-        task_dir = task_dir_train if mode in ["train","pretrain","val"] else task_dir_dev
         task_label_fname = task_label_fname_train if mode in \
                         ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
-        cccount = 0
         for lang_dir in os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
@@ -143,9 +139,6 @@ class MyDataset(Dataset):
     def augment_data(self, data):
         print(data[1])
         new_data = data
-        label_count = {}
-        
-        max_label_count = 1
         augment_data_cache, augmented_fname = [], "taskIII_augment_data_cache_"+self.mode+".json"
         if os.path.exists(augmented_fname):
             with open(augmented_fname, "r") as f:
