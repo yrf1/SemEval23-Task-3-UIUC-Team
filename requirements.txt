@@ -1,7 +1,7 @@
 torch
 scikit-learn
 numpy
-pandas
+pandas==1.5.3 # important to use this version because the skip bad line function
 tqdm
 transformers
 googletrans==3.1.0a0 # it's important to get this version

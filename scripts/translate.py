@@ -3,23 +3,21 @@ import os
 from tqdm import tqdm
 from googletrans import Translator # pip install googletrans==3.1.0a0
 
-
-en_all = []
-fr_all = []
-ge_all = [] # German is de in googletrans
-it_all = []
-po_all = [] # Polish is pl in googletrans
-ru_all = []
-
-data_dir = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data"
+# data_dir = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data" # server
+data_dir = "/Users/genglinliu/Documents/GitHub/SemEval23-Task-3-UIUC-Team/data" # local
 
 # initialize the translator
 translator = Translator()
 
 mt_map = {"en":"en","fr":"fr","ge":"de","it":"it","po":"pl","ru":"ru"}
 
+# col_names=['doc_id', 'paragraph_id', 'text', 'extra_1', 'extra_2'] 
+col_names=['doc_id', 'paragraph_id', 'text']
+path = data_dir + "/po/train-labels-subtask-3.template"
+df = pd.read_csv(path, sep='\t', names=col_names, on_bad_lines="warn")
+
 for lang_dir in os.listdir(data_dir):
-    col_names=['doc_id', 'paragraph_id', 'text'] 
+    col_names=['doc_id', 'paragraph_id', 'text', 'extra_1', 'extra_2'] 
 
     for mode in ["train", "dev"]:
         # ex. "en/train-labels-subtask-3.template"
@@ -49,7 +47,4 @@ for lang_dir in os.listdir(data_dir):
             df[str("translated_"+target_lang)] = translated_column
 
         # write the dataframe to a new CSV file
-        df.to_csv(data_dir+"/"+lang_dir+"/"+mode+"-translated.template", sep="\t", index=False)
-
-# TODO: since some Russian files have more than 3 tabs, we have to extract the text content without naming it
-# then once we are done translate let's just put it in a different csv
+        df.to_csv(data_dir+"/"+lang_dir+"/"+mode+"-translated.csv", sep="\t", index=False)
