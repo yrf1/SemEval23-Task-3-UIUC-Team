@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 from tqdm import tqdm
 from googletrans import Translator # pip install googletrans==3.1.0a0
 
@@ -17,7 +16,7 @@ target_lang = "en"
 # ex. we translate to English from the 5 other languages
 for src_lang in ["en", "fr", "ge", "it", "po", "ru"]:   
 
-    if target_lang == mt_map[src_lang]:
+    if target_lang == src_lang:
         continue 
 
     for mode in ["train", "dev"]:
@@ -35,13 +34,14 @@ for src_lang in ["en", "fr", "ge", "it", "po", "ru"]:
 
         # translate each element in the column
         for text in tqdm(column_to_translate):
-            translated = translator.translate(text, dest=target_lang, src=mt_map[src_lang]).text #fr is the destination language
+            translated = translator.translate(text, dest=mt_map[target_lang], src=mt_map[src_lang]).text #fr is the destination language
             translated_column.append(translated)
 
         # add the translated column to the dataframe
-        df[src_lang+"-"+target_lang] = translated_column
+        new_col_name = str(src_lang+"-"+target_lang)
+        df[new_col_name] = translated_column
 
-        df = df[['doc_id', 'paragraph_id', target_lang]]
+        df_out = df[['doc_id', 'paragraph_id', new_col_name]]
 
         # write the dataframe to a new CSV file
-        df.to_csv(src_lang+"-"+target_lang+"-translated.csv", sep="\t", index=False)
+        df_out.to_csv(src_lang+"-"+target_lang+"-"+mode+"-translated.csv", sep="\t", index=False)
