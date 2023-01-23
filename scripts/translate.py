@@ -2,37 +2,51 @@ import pandas as pd
 import os
 from tqdm import tqdm
 from googletrans import Translator # pip install googletrans==3.1.0a0
-from google_trans_new import google_translator
 
 
-# data_dir = "data/"
-# for lang_dir in os.listdir(data_dir):
-#     labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+"train-labels-subtask-3.template", sep="\t", header=None)
+en_all = []
+fr_all = []
+ge_all = [] # German is de in googletrans
+it_all = []
+po_all = [] # Polish is pl in googletrans
+ru_all = []
 
-# read in the tab separated template file
-col_names=['doc_id', 'paragraph_id', 'text'] 
-data_path = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data/en/dev-labels-subtask-3.template"
-df = pd.read_csv(data_path, sep='\t', names=col_names)
-
-# select the column you want to translate
-column_to_translate = df["text"]
+data_dir = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data"
 
 # initialize the translator
 translator = Translator()
-# translator = google_translator()
 
-# create a new list to store the translated text
-translated_column = []
+mt_map = {"en":"en","fr":"fr","ge":"de","it":"it","po":"pl","ru":"ru"}
 
-# translate each element in the column
-for text in tqdm(column_to_translate):
-    translated = translator.translate(text, dest='fr', src='en').text #fr is the destination language
-    translated_column.append(translated)
+for lang_dir in os.listdir(data_dir):
+    col_names=['doc_id', 'paragraph_id', 'text'] 
 
-# add the translated column to the dataframe
-df["translated_column_name"] = translated_column
+    for mode in ["train", "dev"]:
+        # ex. "en/train-labels-subtask-3.template"
+        current_folder = lang_dir+"/"+mode+"-labels-subtask-3.template"
+        df = pd.read_csv(data_dir+"/"+current_folder, sep="\t", names=col_names, header=None)
 
-print(df)
+        # ex. you're at English folder right now, so translate English to the 5 other languages
+        for target_lang in ["en", "fr", "de", "it", "pl", "ru"]:
 
-# write the dataframe to a new CSV file
-df.to_csv("translated_file.csv", index=False)
+            print("current folder: " + current_folder)
+            print("Translating from: " + lang_dir + " to: " + target_lang)
+            
+            if target_lang == mt_map[lang_dir]:
+                continue
+            
+            column_to_translate = df["text"]
+
+            # create a new list to store the translated text
+            translated_column = []
+
+            # translate each element in the column
+            for text in tqdm(column_to_translate):
+                translated = translator.translate(text, dest=target_lang, src=mt_map[lang_dir]).text #fr is the destination language
+                translated_column.append(translated)
+
+            # add the translated column to the dataframe
+            df[str("translated_"+target_lang)] = translated_column
+
+        # write the dataframe to a new CSV file
+        df.to_csv(data_dir+"/"+lang_dir+"/"+mode+"-translated.template", sep="\t", index=False)
