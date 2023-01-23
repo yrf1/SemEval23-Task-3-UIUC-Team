@@ -31,7 +31,7 @@ for lang_dir in os.listdir(data_dir):
 
             print("current folder: " + current_folder)
             print("Translating from: " + lang_dir + " to: " + target_lang)
-            
+
             if target_lang == mt_map[lang_dir]:
                 continue
             
@@ -50,3 +50,6 @@ for lang_dir in os.listdir(data_dir):
 
         # write the dataframe to a new CSV file
         df.to_csv(data_dir+"/"+lang_dir+"/"+mode+"-translated.template", sep="\t", index=False)
+
+# TODO: since some Russian files have more than 3 tabs, we have to extract the text content without naming it
+# then once we are done translate let's just put it in a different csv
