@@ -36,7 +36,7 @@ lang = "it"
 lrate = 1e-5 #1e-6 has final loss of 0.1236
 use_def = True 
 MT_augment = True
-skip_train = sys.argv[1].lower() == 'true'
+skip_train = False
 cross_val = False 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"

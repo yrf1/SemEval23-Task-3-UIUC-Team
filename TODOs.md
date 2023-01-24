@@ -4,6 +4,13 @@ Deadline: submission deadline is 1/30
 
 Our focus is on subtask 3: persuasion techniques
 
+TODOs 1/24
+ - Translate the label definition in the 5 different languages as well.
+ - Train on each language with augmented data
+ - try English first 
+ - Then French
+ - Model: MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+
 TODOs update 1/22
  - Augment every language using EVERY other language
 
