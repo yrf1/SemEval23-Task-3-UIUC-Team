@@ -11,7 +11,7 @@ translator = Translator()
 mt_map = {"en":"en","fr":"fr","ge":"de","it":"it","po":"pl","ru":"ru"}
 col_names=['doc_id', 'paragraph_id', 'text']
 
-target_lang = "ru"
+target_lang = "en"
 
 # ex. we translate to English from the 5 other languages
 for src_lang in ["en", "fr", "ge", "it", "po", "ru"]:   
