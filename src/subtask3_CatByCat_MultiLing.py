@@ -10,6 +10,7 @@ import os
 import torch
 import random
 import pandas as pd
+from tqdm import tqdm
 from datetime import datetime
 from collections import Counter
 from torch.utils.data import Dataset, DataLoader
@@ -33,11 +34,11 @@ df = pd.read_csv("data/"+lang+"/"+task_label_fname_train, sep="\t",header=None)[
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
 print(label_count)
-LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>0] #100]
+LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>100] #100]
 #LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
 #        'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
 
-LABELS_DEF = pd.read_csv("utils/task3_def.csv",header=None)
+LABELS_DEF = pd.read_csv("utils/task3_label_def_all_languages.csv",header=None)
 
 ## Load Data
 class MyDataset(Dataset):
@@ -123,9 +124,8 @@ for cross_val_split_idx in range(5):
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
-    print(len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
+    print(len(train_dataset), len(val_dataset), len(dev_dataset))
     ## Set Model
-    #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
     
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
@@ -138,21 +138,19 @@ for cross_val_split_idx in range(5):
         print("loaded ckpt from... " + model_ckpts)
         model.load_state_dict(torch.load(model_ckpts))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
-    for (mode, tot_eps, dataloader) in [("pretrain",2 if not skip_train else 0,pretrain_dataloader),\
-            ("train",2 if not skip_train else 0,train_dataloader), ("val",1,val_dataloader), ("dev",1,dev_dataloader)]:
+    for (mode, tot_eps, dataloader) in [("pretrain",2 if not skip_train else 0,pretrain_dataloader),("train",2 if not skip_train else 0,train_dataloader), ("val",1,val_dataloader), ("dev",1,dev_dataloader)]:
         if skip_train and mode=="train": 
             if model_name == "facebook/bart-large-mnli":
                 print("loaded ckpt from... " + model_ckpts)
                 model.load_state_dict(torch.load(model_ckpts))
             continue
-        #model, optim, dataloader = accelerator.prepare(model, optim, dataloader)
+        
         if mode in ["dev","val","test"]:
             model = model.eval()
         for ep in range(tot_eps):
             loss_tracker = []
-            for idx, (fname, segID, x, prop_idx, y) in enumerate(dataloader):
+            for idx, (fname, segID, x, prop_idx, y) in tqdm(enumerate(dataloader)):
                 optim.zero_grad()
-                #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
                 out = model(**x)
                 if mode in ["pretrain", "train"]:
                     loss_ = loss(out.logits, y)
@@ -160,7 +158,6 @@ for cross_val_split_idx in range(5):
                     loss_tracker.append(loss_.item())
                     optim.step()
                 if mode in ["val","dev"]:
-                    #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
                     pred_y = out.logits.argmax(1).item()
                     
                 if mode in ["val"]:
