@@ -45,7 +45,7 @@ LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition",
 LABELS_OF_INTEREST_pos_counter = {}
 LABELS_OF_INTEREST_neg_counter = {}
 
-LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
+LABELS_DEF = pd.read_csv("utils/task3_def.csv",header=None)
 
 ## Load Data
 class MyDataset(Dataset):

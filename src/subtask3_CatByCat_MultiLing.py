@@ -5,19 +5,8 @@ python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en2.txt -g data/en/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
 
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-it2.txt -g data/it/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
-micro-F1=0.12850	macro-F1=0.11477
-
-
-Just on Loaded_Language: micro-F1=0.69336	macro-F1=0.98667
-On Loaded_Language,Repetition,Doubt: micro-F1=0.47684       macro-F1=0.92623
-On "Loaded_Language","Name_Calling-Labeling","Repetition","Doubt": micro-F1=0.41938	macro-F1=0.89595
-Above with definitions: micro-F1=0.47917	macro-F1=0.90273
-On top 8: micro-F1=0.45370       macro-F1=0.79689
 """
 import os
-import sys
-import copy
-import json
 import torch
 import random
 import pandas as pd
@@ -25,22 +14,16 @@ from datetime import datetime
 from collections import Counter
 from torch.utils.data import Dataset, DataLoader
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-from transformers import MarianMTModel, MarianTokenizer
-
-
-#accelerator = Accelerator()
 
 ## Initialize Settings
 #lang = "en"
 lang = "it"
-lrate = 1e-5 #1e-6 has final loss of 0.1236
+lrate = 1e-5 
 use_def = True 
-MT_augment = True
 skip_train = False
 cross_val = False 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
-#model_name = "xlm-mlm-xnli15-1024" 
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" # Train: micro-F1=0.03161	macro-F1=0.06228 (?) #"facebook/bart-large-mnli"
 task_dir_train = "train-articles-subtask-3"
 task_label_fname_train = "train-labels-subtask-3.txt"
@@ -53,13 +36,8 @@ print(label_count)
 LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>0] #100]
 #LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
 #        'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
-if model_name == "t5-large":
-    LABELS_OF_INTEREST = ['Appeal_to_Hypocrisy', 'Obfuscation-Vagueness-Confusion'] #, \
-                          #'Whataboutism', 'Appeal_to_Popularity', 'Straw_Man']
-LABELS_OF_INTEREST_pos_counter = {}
-LABELS_OF_INTEREST_neg_counter = {}
 
-LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
+LABELS_DEF = pd.read_csv("utils/task3_def.csv",header=None)
 
 ## Load Data
 class MyDataset(Dataset):
@@ -111,12 +89,7 @@ class MyDataset(Dataset):
         if mode=="train":
             del self.data_lang[cross_val_split_idx::5]
         self.mode = mode
-        self.tokenizer = AutoTokenizer.from_pretrained("bigscience/T0pp" if "T5" in model_name else model_name)
-        if MT_augment:
-            if mode=="pretrain":
-                self.data_all = self.augment_data(self.data_all)
-            if mode=="train":
-                self.data_lang = self.augment_data(self.data_lang)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def __len__(self):
         return len(self.data_all) if self.mode=="pretrain" else len(self.data_lang)
@@ -136,57 +109,7 @@ class MyDataset(Dataset):
         propaganda_idx = torch.tensor(self.all_labels.index(txt2))
         #print(fname, segID, txt1, label.item())
         return fname, segID, txt, propaganda_idx, label
-    def augment_data(self, data):
-        print(data[1])
-        new_data = data
-        augment_data_cache, augmented_fname = [], "taskIII_augment_data_cache_"+self.mode+".json"
-        if os.path.exists(augmented_fname):
-            with open(augmented_fname, "r") as f:
-                augment_data_cache = json.load(f)
-            for x in augment_data_cache:
-                if x not in data:
-                    data.append(x)
-            return data
-        MT_ln_map = {"en":"en","fr":"fr","ge":"de","it":"it","po":"pl","ru":"ru"}
-        for ln in ["en","fr","ge","it","ru"]:
-            for src_ln in ["en","fr","ge","it","ru"]:
-                if src_ln == ln:
-                    continue
-                ln, src_lang = MT_ln_map[ln], MT_ln_map[src_ln]
-                self.mt_model_name = "Helsinki-NLP/opus-mt-"+src_lang+"-"+ln
-                self.mt_model = MarianMTModel.from_pretrained(self.mt_model_name).to(device)
-                self.mt_tokenizer = MarianTokenizer.from_pretrained(self.mt_model_name)
-                self.bmt_model_name = "Helsinki-NLP/opus-mt-"+ln+"-"+src_lang
-                self.bmt_model = MarianMTModel.from_pretrained(self.bmt_model_name).to(device)
-                self.bmt_tokenizer = MarianTokenizer.from_pretrained(self.bmt_model_name)
-                for data_x in copy.deepcopy(data):
-                    if True and src_ln ==data_x[-1]:
-                        if len(new_data)%2000==0:
-                            with open(augmented_fname, "w") as f:
-                                json.dump(augment_data_cache, f)
-                            print(src_lang, ln, data_x[2], len(data), datetime.now())
-                        txt_MT = self.translate(data_x[2], src_lang, ln)
-                        data_x = data_x[:2]+(txt_MT,)+data_x[3:-1]+(ln,)
-                        augment_data_cache.append(data_x)
-                        txt_bMT = self.translate(txt_MT, ln, src_lang, True)
-                        data_x = data_x[:2]+(txt_bMT,)+data_x[3:]
-                        augment_data_cache.append(data_x)
-                        new_data.append(data_x)
-            if src_ln!=ln:
-                break
-        self.mt_model, self.bmt_model = None, None
-        return new_data
-    def translate(self, txt, src_lang, tgt_lang, backward=False):
-        src_text = [">>"+tgt_lang+"<< "+txt]
-        if backward:
-            tokens = self.bmt_tokenizer(src_text, return_tensors="pt", pad_to_max_length=True, max_length=512)
-            tokens = {k: v.to(device) for k, v in tokens.items()}
-            translated = self.bmt_model.generate(**tokens)
-            return [self.bmt_tokenizer.decode(t, skip_special_tokens=True) for t in translated][0]
-        tokens = self.mt_tokenizer(src_text, return_tensors="pt", pad_to_max_length=True, max_length=512)
-        tokens = {k: v.to(device) for k, v in tokens.items()}
-        translated = self.mt_model.generate(**tokens)
-        return [self.mt_tokenizer.decode(t, skip_special_tokens=True) for t in translated][0]
+
 
 pretrain_dataset = MyDataset("pretrain") 
 pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
