@@ -36,7 +36,8 @@ import random
 import pandas as pd
 from datetime import datetime
 from collections import Counter
-from accelerate import Accelerator
+# from accelerate import Accelerator
+from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, T5ForConditionalGeneration
 from transformers import XLMTokenizer, XLMForSequenceClassification
@@ -260,6 +261,7 @@ for cross_val_split_idx in range(5):
         print("loaded ckpt from... " + model_ckpts)
         model.load_state_dict(torch.load(model_ckpts))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
+    print("start train")
     for (mode, tot_eps, dataloader) in [("pretrain",2 if not skip_train else 0,pretrain_dataloader),\
             ("train",3 if not skip_train else 0,train_dataloader), ("dev",1,dev_dataloader)]:
         if skip_train and mode=="train": 
@@ -272,7 +274,7 @@ for cross_val_split_idx in range(5):
             model = model.eval()
         for ep in range(tot_eps):
             loss_tracker = []
-            for idx, (fname, segID, x, prop_idx, y) in enumerate(dataloader):
+            for idx, (fname, segID, x, prop_idx, y) in tqdm(enumerate(dataloader)):
                 optim.zero_grad()
                 #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
                 out = model(**x)
