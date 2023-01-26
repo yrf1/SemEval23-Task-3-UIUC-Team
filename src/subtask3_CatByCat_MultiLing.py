@@ -4,15 +4,28 @@ Add online sampling instead of in-advance
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt -g data/en/train-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en2.txt -g data/en/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
 
-python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-it2.txt -g data/it/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
-micro-F1=0.12850	macro-F1=0.11477
+python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7, lr 1e-5, 2 pretrain, 3 train epoch, 
+micro-F1=0.50182	macro-F1=0.15209
+('Guilt_by_Association', 0.27586206896551724, 0.5714285714285714, 0.18181818181818182, 22)
+('Exaggeration-Minimisation', 0.09230769230769231, 0.17647058823529413, 0.0625, 48)
+('Appeal_to_Values', 0.2469135802469136, 0.38461538461538464, 0.18181818181818182, 55)
+('Conversation_Killer', 0.2786885245901639, 0.32075471698113206, 0.2463768115942029, 69)
+('Appeal_to_Fear-Prejudice', 0.37563451776649737, 0.3333333333333333, 0.43023255813953487, 86)
+('Questioning_the_Reputation', 0.3767313019390581, 0.28451882845188287, 0.5573770491803278, 122)
+('Name_Calling-Labeling', 0.5648854961832062, 0.5235849056603774, 0.6132596685082873, 181)
+('Doubt', 0.6221662468513853, 0.48717948717948717, 0.8606271777003485, 287)
+('Loaded_Language', 0.6649616368286445, 0.5349794238683128, 0.8783783783783784, 296)
 
-
-Just on Loaded_Language: micro-F1=0.69336	macro-F1=0.98667
-On Loaded_Language,Repetition,Doubt: micro-F1=0.47684       macro-F1=0.92623
-On "Loaded_Language","Name_Calling-Labeling","Repetition","Doubt": micro-F1=0.41938	macro-F1=0.89595
-Above with definitions: micro-F1=0.47917	macro-F1=0.90273
-On top 8: micro-F1=0.45370       macro-F1=0.79689
+MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7, 2 pretrain, 2 train, no additional 50% pertubation for increased negative samples 
+*('Exaggeration-Minimisation', 0.18118466898954705, 0.1087866108786611, 0.5416666666666666, 48)
+*('Appeal_to_Values', 0.26666666666666666, 0.17, 0.6181818181818182, 55)
+('Conversation_Killer', 0.23121387283236994, 0.13333333333333333, 0.8695652173913043, 69)
+('Appeal_to_Fear-Prejudice', 0.26587301587301587, 0.16028708133971292, 0.7790697674418605, 86)
+*('Questioning_the_Reputation', 0.3463497453310696, 0.21841541755888652, 0.8360655737704918, 122)
+('Name_Calling-Labeling', 0.4860907759882869, 0.33067729083665337, 0.9171270718232044, 181)
+('Doubt', 0.5774804905239688, 0.4245901639344262, 0.9024390243902439, 287)
+('Loaded_Language', 0.6279863481228668, 0.4734133790737564, 0.9324324324324325, 296)
 """
 import os
 import sys
@@ -54,8 +67,9 @@ df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
 print(label_count)
 LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>0] #100]
-#LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Repetition","Doubt", \
-#        'Exaggeration-Minimisation','Appeal_to_Fear-Prejudice', 'Flag_Waving', 'Causal_Oversimplification']
+LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Doubt", 'Questioning_the_Reputation', \
+        'Appeal_to_Fear-Prejudice', 'Conversation_Killer', 'Appeal_to_Values', 'Exaggeration-Minimisation', \
+        'Guilt_by_Association']
 if model_name == "t5-large":
     LABELS_OF_INTEREST = ['Appeal_to_Hypocrisy', 'Obfuscation-Vagueness-Confusion'] #, \
                           #'Whataboutism', 'Appeal_to_Popularity', 'Straw_Man']
@@ -73,7 +87,7 @@ class MyDataset(Dataset):
                         ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
         cccount = 0
-        for lang_dir in os.listdir(data_dir):
+        for lang_dir in ["en", "it","ru","fr","ru","ge"]: #os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
             with open(data_dir+"/"+lang_dir+"/"+task_label_fname.replace(".txt",".template"), "r") as f:
@@ -110,18 +124,18 @@ class MyDataset(Dataset):
                 self.data_lang = self.data_lang[cross_val_split_idx::5]
             if lang_dir==lang and mode=="train" and cross_val:
                 del self.data_lang[cross_val_split_idx::5]
-        if mode=="val":
-            pass
-            #self.data_all = self.data_all[cross_val_split_idx::5]
-        if mode=="train":
-            del self.data_lang[cross_val_split_idx::5]
+        #if mode=="val":
+        #    pass
+        #    #self.data_all = self.data_all[cross_val_split_idx::5]
+        #if mode=="train":
+        #    del self.data_lang[cross_val_split_idx::5]
         self.mode = mode
         self.tokenizer = AutoTokenizer.from_pretrained("bigscience/T0pp" if "T5" in model_name else model_name)
         if MT_augment:
             if mode=="pretrain":
                 self.data_all = self.augment_data(self.data_all)
-            if mode=="train":
-                self.data_lang = self.augment_data(self.data_lang)
+            #if mode=="train":
+            #    self.data_lang = self.augment_data(self.data_lang)
         #self.tokenizer = self.tokenizer.add_tokens(['<S>','<Q>','<A>'])
         #print(len([x for x in self.data_lang if x[-2]==""]))
         #print(len([x for x in self.data_lang if x[-2]!=""]))
@@ -132,6 +146,9 @@ class MyDataset(Dataset):
         fname, segID, txt1, propaganda, this_all_labels, ln = self.data_all[idx] if self.mode=="pretrain" else self.data_lang[idx]
         txt2 = propaganda if propaganda!="" else random.choice([x for x in self.all_labels if x not in this_all_labels])
         #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
+        if random.choice([0,2])==0 and propaganda!="" and self.mode=="train":
+            propaganda = ""
+            txt2 = random.choice([x for x in LABELS_OF_INTEREST if x not in this_all_labels and x !=""])
         txt2_exp = txt2
         if use_def:
             txt2_exp = txt2+": "+LABELS_DEF[LABELS_DEF[0]==txt2][1].values[0]
@@ -150,18 +167,27 @@ class MyDataset(Dataset):
         #print(fname, segID, txt1, label.item())
         return fname, segID, txt, propaganda_idx, label
     def augment_data(self, data):
-        print(data[1])
         new_data = data
         label_count = {}
-        
-        max_label_count = 1
+        for d in data:
+            if d[-3] not in label_count and d[-3]!="":
+                label_count[d[-3]] = 0
+            if d[-3]!="":
+                label_count[d[-3]] += 1
+        max_label_count = max(label_count.values())
         augment_data_cache, augmented_fname = [], "taskIII_augment_data_cache_"+self.mode+".json"
         if os.path.exists(augmented_fname):
             with open(augmented_fname, "r") as f:
                 augment_data_cache = json.load(f)
             for x in augment_data_cache:
                 if x not in data:
-                    data.append(x)
+                    if x[-3]!="" and (self.mode=="pretrain" or x[-1]==lang):
+                        if x[-3] not in label_count:
+                            continue
+                        if label_count[x[-3]] < max_label_count:
+                            data.append(x)
+                            label_count[x[-3]] += 1
+            print(label_count)
             return data
         MT_ln_map = {"en":"en","fr":"fr","ge":"de","it":"it","po":"pl","ru":"ru"}
         for ln in ["en","fr","ge","it","ru"]:
@@ -185,7 +211,7 @@ class MyDataset(Dataset):
                         data_x = data_x[:2]+(txt_MT,)+data_x[3:-1]+(ln,)
                         augment_data_cache.append(data_x)
                         txt_bMT = self.translate(txt_MT, ln, src_lang, True)
-                        data_x = data_x[:2]+(txt_bMT,)+data_x[3:]
+                        data_x = data_x[:2]+(txt_bMT,)+data_x[3:-1]+(src_ln,)
                         augment_data_cache.append(data_x)
                         new_data.append(data_x)
             if src_ln!=ln:
@@ -217,7 +243,8 @@ for cross_val_split_idx in range(5):
     val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
-    print(len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
+    print(len(pretrain_dataset), len(train_dataset), len(val_dataset), len(dev_dataset)) #18996 6254
+    #quit()
     ## Set Model
     #if model_name in ["facebook/bart-large-mnli","MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"]:
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
@@ -225,7 +252,7 @@ for cross_val_split_idx in range(5):
     #    model = T5ForConditionalGeneration.from_pretrained("bigscience/T0pp") #t5-large")
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
-    ep = 4
+    ep = 2
     model_ckpts = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def" if use_def else "")+".pt"
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
         os.system("mkdir ckpts/"+str(cross_val_split_idx))
@@ -234,7 +261,7 @@ for cross_val_split_idx in range(5):
         model.load_state_dict(torch.load(model_ckpts))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
     for (mode, tot_eps, dataloader) in [("pretrain",2 if not skip_train else 0,pretrain_dataloader),\
-            ("train",2 if not skip_train else 0,train_dataloader), ("val",1,val_dataloader), ("dev",1,dev_dataloader)]:
+            ("train",3 if not skip_train else 0,train_dataloader), ("dev",1,dev_dataloader)]:
         if skip_train and mode=="train": 
             if model_name == "facebook/bart-large-mnli":
                 print("loaded ckpt from... " + model_ckpts)
@@ -281,19 +308,19 @@ for cross_val_split_idx in range(5):
                             #quit()
                         dev_results_tracker[fname][segID].append(pred_y)
             if mode in ["pretrain", "train"]:
-                print(sum(loss_tracker)/len(loss_tracker))
+                print(datetime.now(), sum(loss_tracker)/len(loss_tracker))
             if mode == "train":
                 torch.save(model.state_dict(), model_ckpts)
     if not cross_val:
         break
-
+"""
 data = []
 for fname, v in train_results_tracker.items():
     for segID, pred_y in v.items():
         data.append((fname[0], segID[0], ",".join(pred_y)))
 train_results_tracker = pd.DataFrame(data)
 train_results_tracker.to_csv("baselines/our-train-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
-    sep="\t", index=None, header=None)
+    sep="\t", index=None, header=None)"""
 data = []
 for fname, v in dev_results_tracker.items():
     for segID, pred_y in v.items():
