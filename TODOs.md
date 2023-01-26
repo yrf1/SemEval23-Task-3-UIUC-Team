@@ -6,8 +6,9 @@ Our focus is on subtask 3: persuasion techniques
 
 TODOs 1/25
  - so the concern is we have more rows in the labels file than the template files
- - I need to write a script that can verify whether every line in the template file has a corresponding label
- - this is the most important step now. Once you've made sure the data is clean, we will kick off the training
+ - Write a script that can verify whether every line in the template file has a corresponding label
+ - [update: this is verified] Once you've made sure the data is clean, we will kick off the training
+ - maybe filter on the label files so that it has a one-to-one correspondence with each individual language
 
 TODOs 1/24
  - Translate the label definition in the 5 different languages as well.
