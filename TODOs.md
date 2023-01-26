@@ -4,6 +4,11 @@ Deadline: submission deadline is 1/30
 
 Our focus is on subtask 3: persuasion techniques
 
+TODOs 1/25
+ - so the concern is we have more rows in the labels file than the template files
+ - I need to write a script that can verify whether every line in the template file has a corresponding label
+ - this is the most important step now. Once you've made sure the data is clean, we will kick off the training
+
 TODOs 1/24
  - Translate the label definition in the 5 different languages as well.
  - Train on each language with augmented data
