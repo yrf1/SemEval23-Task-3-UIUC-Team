@@ -55,7 +55,7 @@ MT_augment = True
 skip_train = sys.argv[1].lower() == 'true'
 cross_val = False #
 device = "cuda" if torch.cuda.is_available() else "cpu"
-data_dir = "data/"
+data_dir = "data_original/"
 #model_name = "xlm-mlm-xnli15-1024" 
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" # Train: micro-F1=0.03161	macro-F1=0.06228 (?) #"facebook/bart-large-mnli"
 #model_name, skip_train, cross_val, use_def, device = "t5-large", True, False, False, "cuda"
