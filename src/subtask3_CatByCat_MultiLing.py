@@ -4,7 +4,7 @@ Add online sampling instead of in-advance
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt -g data/en/train-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en2.txt -g data/en/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
 
-python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data_original/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7, lr 1e-5, 2 pretrain, 3 train epoch, 
 micro-F1=0.50182	macro-F1=0.15209
 ('Guilt_by_Association', 0.27586206896551724, 0.5714285714285714, 0.18181818181818182, 22)
