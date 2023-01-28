@@ -9,6 +9,7 @@ TODOs 1/28:
  - clean up the googletrans files, make sure for EACH language we have a one-to-one correspondence between template and label files
  - pretrain on the googletrans file
  - finetune on the uncommon labels
+ - maybe translate to the surprise languages (es, gr, ka) as well?
 
 TODOs as of 1/19:
  - train on english dataset with 2021 task 6 data

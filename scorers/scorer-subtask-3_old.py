@@ -2,7 +2,7 @@ import logging.handlers
 import argparse
 import sys
 import os
-from sklearn.metrics import f1_score, precision_score, recall_score
+from sklearn.metrics import f1_score
 from sklearn.preprocessing import MultiLabelBinarizer
 import sklearn
 
@@ -198,18 +198,6 @@ if __name__ == '__main__':
     if gold_labels:
       macro_f1, micro_f1 = evaluate(pred_labels, gold_labels, CLASSES)
       logger.info("micro-F1={:.5f}\tmacro-F1={:.5f}".format(micro_f1, macro_f1))
-      results_by_class = []
-      for c in CLASSES:
-          y_true_c = [(1 if c in v else 0) for k, v in gold_labels.items()]
-          y_pred_c = [(1 if c in v else 0) for k, v in pred_labels.items()]
-          c_fscore = f1_score(y_true_c, y_pred_c, average='binary')
-          c_precision = precision_score(y_true_c, y_pred_c, average='binary')
-          c_recall = recall_score(y_true_c, y_pred_c, average='binary')
-          results_by_class.append((c, c_fscore, c_precision, c_recall, sum(y_true_c)))
-          
-      results_by_class.sort(key=lambda tup: tup[-1]) 
-      for result_by_class in results_by_class:
-          print(result_by_class)
       if output_for_script:
         print("{}\t{}".format(micro_f1, macro_f1))
 

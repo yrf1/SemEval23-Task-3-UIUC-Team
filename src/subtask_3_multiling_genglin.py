@@ -1,6 +1,5 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt -g data/en/train-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
@@ -18,7 +17,7 @@ from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
 #lang = "en"
-lang = "it"
+lang = "po"
 lrate = 1e-5 
 use_def = True 
 MT_augment = True
@@ -50,7 +49,7 @@ class MyDataset(Dataset):
         task_label_fname = task_label_fname_train if mode in \
                         ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
-        for lang_dir in ["en", "it","ru","fr","ru","ge"]: #os.listdir(data_dir):
+        for lang_dir in ["en", "it","ge","fr","po","ru"]: #os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
             with open(data_dir+"/"+lang_dir+"/"+task_label_fname.replace(".txt",".template"), "r") as f:
