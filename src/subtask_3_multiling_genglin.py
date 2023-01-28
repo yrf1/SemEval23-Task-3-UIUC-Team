@@ -1,5 +1,6 @@
 """
 Running scorer locally:
+python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt -g data/en/train-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
@@ -49,7 +50,6 @@ class MyDataset(Dataset):
         task_label_fname = task_label_fname_train if mode in \
                         ["train","pretrain","val"] else task_label_fname_dev
         self.all_labels = [] if mode not in ["val", "dev"] else all_labels
-        cccount = 0
         for lang_dir in ["en", "it","ru","fr","ru","ge"]: #os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
@@ -189,7 +189,7 @@ class MyDataset(Dataset):
 
 pretrain_dataset = MyDataset("pretrain") 
 pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
-#print(len(pretrain_dataset))
+print("pretrain length: ", len(pretrain_dataset))
 
 train_results_tracker, dev_results_tracker  = {}, {}
 for cross_val_split_idx in range(5):
