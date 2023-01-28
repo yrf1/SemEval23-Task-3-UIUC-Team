@@ -4,6 +4,12 @@ Deadline: submission deadline is 1/30
 
 Our focus is on subtask 3: persuasion techniques
 
+TODOs 1/28: 
+ - first make sure that your condensed training script can actually run
+ - clean up the googletrans files, make sure for EACH language we have a one-to-one correspondence between template and label files
+ - pretrain on the googletrans file
+ - finetune on the uncommon labels
+
 TODOs as of 1/19:
  - train on english dataset with 2021 task 6 data
  - restructure the code and make it modular

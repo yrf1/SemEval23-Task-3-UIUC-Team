@@ -142,6 +142,14 @@ class MyDataset(Dataset):
                 self.data_all = self.augment_data(self.data_all)
             #if mode=="train":
             #    self.data_lang = self.augment_data(self.data_lang)
+        if mode=="pretrain":
+            print("Printing label count stats for pretrain")
+            count = self.label_count_stats(self.data_all)
+            print(count)
+        elif mode=="train":
+            print("Printing label count stats for train")
+            count = self.label_count_stats(self.data_lang)
+            print(count)
         #self.tokenizer = self.tokenizer.add_tokens(['<S>','<Q>','<A>'])
         #print(len([x for x in self.data_lang if x[-2]==""]))
         #print(len([x for x in self.data_lang if x[-2]!=""]))
@@ -235,6 +243,8 @@ class MyDataset(Dataset):
         tokens = {k: v.to(device) for k, v in tokens.items()}
         translated = self.mt_model.generate(**tokens)
         return [self.mt_tokenizer.decode(t, skip_special_tokens=True) for t in translated][0]
+    def label_count_stats(self, data):
+        return Counter([x[-3] for x in data])
 
 pretrain_dataset = MyDataset("pretrain") 
 pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=8, shuffle=True)
