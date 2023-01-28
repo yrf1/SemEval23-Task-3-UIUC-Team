@@ -1,10 +1,15 @@
 """
 TODO:
 Add online sampling instead of in-advance
+run train script: python src/subtask3_CatByCat_MultiLing.py False
+
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en.txt -g data/en/train-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 python scorers/scorer-subtask-3.py -p baselines/our-train-output-subtask3-en2.txt -g data/en/train-labels-subtask-32.txt --techniques_file_path scorers/techniques_subtask3.txt
 
-python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data_original/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+Run scorer:
+python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-fr_def.txt -g data/fr/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+
 MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7, lr 1e-5, 2 pretrain, 3 train epoch, 
 micro-F1=0.50182	macro-F1=0.15209
 ('Guilt_by_Association', 0.27586206896551724, 0.5714285714285714, 0.18181818181818182, 22)
@@ -48,14 +53,14 @@ from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
 #lang = "en"
-lang = "it"
+lang = "fr"
 lrate = 1e-5 #1e-6 has final loss of 0.1236
 use_def = True #
 MT_augment = True
 skip_train = sys.argv[1].lower() == 'true'
 cross_val = False #
 device = "cuda" if torch.cuda.is_available() else "cpu"
-data_dir = "data_original/"
+data_dir = "data/"
 #model_name = "xlm-mlm-xnli15-1024" 
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" # Train: micro-F1=0.03161	macro-F1=0.06228 (?) #"facebook/bart-large-mnli"
 #model_name, skip_train, cross_val, use_def, device = "t5-large", True, False, False, "cuda"
