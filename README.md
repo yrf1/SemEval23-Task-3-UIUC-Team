@@ -133,6 +133,35 @@ micro-F1=0.40552       macro-F1=0.13567
 ('Name_Calling-Labeling', 0.7027027027027026, 0.6190476190476191, 0.8125, 240)
 ```
 
+### Polish
+micro-F1=0.23499       macro-F1=0.08016
+
+```
+('Straw_Man', 0.0, 0.0, 0.0, 3)
+('Whataboutism', 0.0, 0.0, 0.0, 3)
+('Causal_Oversimplification', 0.0, 0.0, 0.0, 5)
+('Appeal_to_Time', 0.0, 0.0, 0.0, 5)
+('Red_Herring', 0.0, 0.0, 0.0, 7)
+('Slogans', 0.0, 0.0, 0.0, 7)
+('False_Dilemma-No_Choice', 0.0, 0.0, 0.0, 8)
+('Consequential_Oversimplification', 0.0, 0.0, 0.0, 8)
+('Repetition', 0.0, 0.0, 0.0, 10)
+('Obfuscation-Vagueness-Confusion', 0.0, 0.0, 0.0, 11)
+('Appeal_to_Popularity', 0.0, 0.0, 0.0, 22)
+('Flag_Waving', 0.0, 0.0, 0.0, 28)
+('Guilt_by_Association', 0.21739130434782608, 0.3125, 0.16666666666666666, 30)
+('Appeal_to_Fear-Prejudice', 0.3703703703703704, 0.5555555555555556, 0.2777777777777778, 36)
+('Appeal_to_Authority', 0.0, 0.0, 0.0, 40)
+('Conversation_Killer', 0.0, 0.0, 0.0, 40)
+('Exaggeration-Minimisation', 0.04347826086956522, 0.16666666666666666, 0.025, 40)
+('Appeal_to_Values', 0.10169491525423728, 0.3333333333333333, 0.06, 50)
+('Questioning_the_Reputation', 0.03278688524590164, 0.25, 0.017543859649122806, 57)
+('Appeal_to_Hypocrisy', 0.0, 0.0, 0.0, 76)
+('Loaded_Language', 0.23529411764705882, 0.3, 0.1935483870967742, 93)
+('Doubt', 0.37623762376237624, 0.3584905660377358, 0.3958333333333333, 96)
+('Name_Calling-Labeling', 0.46640316205533594, 0.4154929577464789, 0.5315315315315315, 111)
+```
+
 ### Russian
 
 micro-F1=0.40393       macro-F1=0.11573
