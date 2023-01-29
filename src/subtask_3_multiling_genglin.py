@@ -79,6 +79,8 @@ class MyDataset(Dataset):
                             lbl = ""
                         if lbl not in self.all_labels and lbl!="":
                             self.all_labels.append(lbl)
+                        # lbl is a label of interest
+                        # label is the whole list of labels
                         self.data_all.append((fname, segID, sent, lbl, label.split(","), lang_dir))
                         if lang_dir == lang: # and (lbl!="" or random.randint(0,5)<4): 
                             self.data_lang.append((fname, segID, sent, lbl, label.split(","), lang_dir))
@@ -91,7 +93,8 @@ class MyDataset(Dataset):
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         if MT_augment:
             if mode=="pretrain":
-                self.data_all = self.augment_data(self.data_all)
+                # self.data_all = self.augment_data(self.data_all)
+                self.data_all = self.augment_data_googletrans()
         if mode=="pretrain":
             print("Printing label count stats for pretrain")
             count = self.label_count_stats(self.data_all)
@@ -120,6 +123,53 @@ class MyDataset(Dataset):
         label = torch.tensor(0 if (propaganda=="" or propaganda not in this_all_labels) else 2).to(device)
         propaganda_idx = torch.tensor(self.all_labels.index(txt2))
         return fname, segID, txt, propaganda_idx, label
+
+    def augment_data_googletrans(self):
+
+        data_text = "/Users/genglinliu/Documents/GitHub/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/data_text/"
+        label_path = "/Users/genglinliu/Documents/GitHub/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/labels/train_labels_all.txt"
+
+        def get_augmented_df(lang):
+
+            df_lang = pd.read_csv(data_text+lang+"/"+"train-labels-subtask-3.template", \
+                                sep='\t', \
+                                names=["doc_id", "paragraph_id", "text"], \
+                                dtype = {'doc_id': str, 'paragraph_id': str, 'text': str}, \
+                                on_bad_lines='skip', \
+                                quoting=3)
+
+            df_labels = pd.read_csv(label_path, \
+                                    sep='\t', \
+                                    names=["doc_id", "paragraph_id", "labels"], \
+                                    dtype = {'doc_id': str, 'paragraph_id': str, 'labels': str},\
+                                    on_bad_lines='skip', \
+                                    quoting=3)
+
+            # merge lang df with labels on two columns
+            df_res_lang = pd.merge(df_lang, df_labels, on=['doc_id','paragraph_id'])
+
+            # transform on the merged df
+            df = df_res_lang
+            df["labels"] = df['labels'].str.split(',')
+            df = df.assign(lbl=df['labels']).explode("lbl")
+            # df = df[df['lbl'].isin(LABELS_OF_INTEREST)]
+            df = df.assign(language=lang)
+
+            df = df.loc[:, ["doc_id","paragraph_id","text","lbl", "labels", "language"]]
+
+            return df
+
+        df_en = get_augmented_df("en")
+        df_fr = get_augmented_df("fr")
+        df_ge = get_augmented_df("ge")
+        df_it = get_augmented_df("it")
+        df_po = get_augmented_df("po")
+        df_ru = get_augmented_df("ru")
+        df_all = pd.concat([df_en, df_fr, df_ge, df_it, df_po, df_ru], ignore_index=True, axis=0)
+        df_res = df_all.fillna("")
+
+        return df_res.values.tolist()
+
     def augment_data(self, data):
         new_data = data
         label_count = {}
