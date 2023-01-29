@@ -1,6 +1,6 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
 import copy
@@ -17,7 +17,7 @@ from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
 #lang = "en"
-lang = "po"
+lang = "fr"
 lrate = 1e-5 
 use_def = True 
 MT_augment = True
@@ -33,10 +33,14 @@ df = pd.read_csv("data/"+lang+"/"+task_label_fname_train, sep="\t",header=None)[
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
 print(label_count)
-LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>0] #100]
-LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Doubt", 'Questioning_the_Reputation', \
-        'Appeal_to_Fear-Prejudice', 'Conversation_Killer', 'Appeal_to_Values', 'Exaggeration-Minimisation', \
-        'Guilt_by_Association']
+# LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>=0] #100]
+# LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Doubt", 'Questioning_the_Reputation', \
+#         'Appeal_to_Fear-Prejudice', 'Conversation_Killer', 'Appeal_to_Values', 'Exaggeration-Minimisation', \
+#         'Guilt_by_Association']
+LABELS_OF_INTEREST = ["", "Appeal_to_Authority", "Appeal_to_Popularity", "Appeal_to_Values", "Appeal_to_Fear-Prejudice", "Flag_Waving", "Causal_Oversimplification", \
+    "False_Dilemma-No_Choice", "Consequential_Oversimplification", "Straw_Man", "Red_Herring", "Whataboutism", "Slogans", "Appeal_to_Time", \
+    "Conversation_Killer", "Loaded_Language", "Repetition", "Exaggeration-Minimisation", "Obfuscation-Vagueness-Confusion", "Name_Calling-Labeling", \
+    "Doubt", "Guilt_by_Association", "Appeal_to_Hypocrisy", "Questioning_the_Reputation"]
 LABELS_OF_INTEREST_pos_counter = {}
 LABELS_OF_INTEREST_neg_counter = {}
 
@@ -126,8 +130,8 @@ class MyDataset(Dataset):
 
     def augment_data_googletrans(self):
 
-        data_text = "/Users/genglinliu/Documents/GitHub/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/data_text/"
-        label_path = "/Users/genglinliu/Documents/GitHub/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/labels/train_labels_all.txt"
+        data_text = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/data_text/"
+        label_path = "/shared/nas/data/users/genglin2/SemEval/SemEval23-Task-3-UIUC-Team/data_googletrans_augmented/labels/train_labels_all.txt"
 
         def get_augmented_df(lang):
 
@@ -316,5 +320,5 @@ for fname, v in dev_results_tracker.items():
         pred_y = list(set(pred_y))
         data.append((fname[0], segID[0], ",".join(pred_y)))
 dev_results_tracker = pd.DataFrame(data)
-dev_results_tracker.to_csv("baselines/our-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
+dev_results_tracker.to_csv("baselines/googletrans-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
     sep="\t", index=None, header=None)

@@ -14,10 +14,41 @@ python scorers/scorer-subtask-3.py -p baselines/our-dev-output-subtask3-it_def.t
 
 # Results: 
 
-## MarianMT augmented
+
 Per-label performance: (c, c_fscore, c_precision, c_recall, sum(y_true_c))
 
-### Italian:
+## Italian:
+
+### GoogleTrans pretrained
+
+micro-F1=0.49203       macro-F1=0.23986
+```
+('Whataboutism', 0.0, 0.0, 0.0, 1)
+('Red_Herring', 0.0, 0.0, 0.0, 4)
+('Obfuscation-Vagueness-Confusion', 0.0, 0.0, 0.0, 4)
+('Consequential_Oversimplification', 0.0, 0.0, 0.0, 9)
+('Flag_Waving', 0.3333333333333333, 0.3333333333333333, 0.3333333333333333, 12)
+('Causal_Oversimplification', 0.0, 0.0, 0.0, 12)
+('Straw_Man', 0.0, 0.0, 0.0, 15)
+('Repetition', 0.1111111111111111, 0.3333333333333333, 0.06666666666666667, 15)
+('False_Dilemma-No_Choice', 0.19999999999999998, 0.21428571428571427, 0.1875, 16)
+('Appeal_to_Time', 0.32, 0.4444444444444444, 0.25, 16)
+('Appeal_to_Popularity', 0.09523809523809525, 0.3333333333333333, 0.05555555555555555, 18)
+('Slogans', 0.30188679245283023, 0.24242424242424243, 0.4, 20)
+('Guilt_by_Association', 0.3428571428571428, 0.46153846153846156, 0.2727272727272727, 22)
+('Appeal_to_Authority', 0.1643835616438356, 0.12244897959183673, 0.25, 24)
+('Appeal_to_Hypocrisy', 0.058823529411764705, 0.14285714285714285, 0.037037037037037035, 27)
+('Exaggeration-Minimisation', 0.21951219512195125, 0.15517241379310345, 0.375, 48)
+('Appeal_to_Values', 0.4228571428571429, 0.30833333333333335, 0.6727272727272727, 55)
+('Conversation_Killer', 0.29775280898876405, 0.18466898954703834, 0.7681159420289855, 69)
+('Appeal_to_Fear-Prejudice', 0.4220779220779221, 0.2927927927927928, 0.7558139534883721, 86)
+('Questioning_the_Reputation', 0.39094650205761317, 0.260989010989011, 0.7786885245901639, 122)
+('Name_Calling-Labeling', 0.5260029717682021, 0.3597560975609756, 0.9779005524861878, 181)
+('Doubt', 0.6394557823129251, 0.47394957983193275, 0.9825783972125436, 287)
+('Loaded_Language', 0.670547147846333, 0.5115452930728241, 0.972972972972973, 296)
+```
+
+### MarianMT pretrained
 
 micro-F1=0.49915       macro-F1=0.14364
 ```
@@ -46,7 +77,7 @@ micro-F1=0.49915       macro-F1=0.14364
 ('Loaded_Language', 0.6727272727272726, 0.5464135021097046, 0.875, 296)
 ```
 
-### English
+## English
 
 micro-F1=0.38898       macro-F1=0.29624
 ```
@@ -75,7 +106,7 @@ micro-F1=0.38898       macro-F1=0.29624
 ('Loaded_Language', 0.5777027027027026, 0.48787446504992865, 0.7080745341614907, 483)
 ```
 
-### French
+## French
 
 micro-F1=0.41096       macro-F1=0.13899
 ```
@@ -104,7 +135,7 @@ micro-F1=0.41096       macro-F1=0.13899
 ('Loaded_Language', 0.7435064935064936, 0.6256830601092896, 0.916, 250)
 ```
 
-### German
+## German
 
 micro-F1=0.40552       macro-F1=0.13567
 ```
@@ -133,7 +164,7 @@ micro-F1=0.40552       macro-F1=0.13567
 ('Name_Calling-Labeling', 0.7027027027027026, 0.6190476190476191, 0.8125, 240)
 ```
 
-### Polish
+## Polish
 micro-F1=0.23499       macro-F1=0.08016
 
 ```
@@ -162,7 +193,7 @@ micro-F1=0.23499       macro-F1=0.08016
 ('Name_Calling-Labeling', 0.46640316205533594, 0.4154929577464789, 0.5315315315315315, 111)
 ```
 
-### Russian
+## Russian
 
 micro-F1=0.40393       macro-F1=0.11573
 ```
