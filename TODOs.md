@@ -4,6 +4,9 @@ Deadline: submission deadline is 1/30
 
 Our focus is on subtask 3: persuasion techniques
 
+TODOs 1/29:
+ - skip pretrain on future models because pretrain now takes more than 3 hours
+
 TODOs 1/28: 
  - first make sure that your condensed training script can actually run
  - clean up the googletrans files, make sure for EACH language we have a one-to-one correspondence between template and label files

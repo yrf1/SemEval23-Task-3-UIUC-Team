@@ -17,12 +17,12 @@ from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
 #lang = "en"
-lang = "fr"
+lang = "en"
 lrate = 1e-5 
 use_def = True 
 MT_augment = True
 # skip_train = sys.argv[1].lower() == 'true'
-skip_train = False
+skip_pretrain = False
 cross_val = False
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
@@ -260,20 +260,19 @@ for cross_val_split_idx in range(5):
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
     ep = 2
-    model_ckpts = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def" if use_def else "")+".pt"
+    model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def" if use_def else "")+".pt"
+    model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+("pretrain_def" if use_def else "")+".pt"
+
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
         os.system("mkdir ckpts/"+str(cross_val_split_idx))
-    if skip_train:
-        print("loaded ckpt from... " + model_ckpts)
-        model.load_state_dict(torch.load(model_ckpts))
+    if skip_pretrain:
+        print("loaded ckpt from... " + model_ckpts_pretrain)
+        model.load_state_dict(torch.load(model_ckpts_pretrain))
     ## Train & Eval, ("pretrain",5,pretrain_dataloader)
     print("start train")
-    for (mode, tot_eps, dataloader) in [("pretrain",2 if not skip_train else 0,pretrain_dataloader),\
-            ("train",3 if not skip_train else 0,train_dataloader), ("dev",1,dev_dataloader)]:
-        if skip_train and mode=="train": 
-            if model_name == "facebook/bart-large-mnli":
-                print("loaded ckpt from... " + model_ckpts)
-                model.load_state_dict(torch.load(model_ckpts))
+    for (mode, tot_eps, dataloader) in [("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
+            ("train",3,train_dataloader), ("dev",1,dev_dataloader)]:
+        if skip_pretrain and mode=="pretrain": 
             continue
         #model, optim, dataloader = accelerator.prepare(model, optim, dataloader)
         if mode in ["dev","val","test"]:
@@ -309,8 +308,10 @@ for cross_val_split_idx in range(5):
                         dev_results_tracker[fname][segID].append(pred_y)
             if mode in ["pretrain", "train"]:
                 print(datetime.now(), sum(loss_tracker)/len(loss_tracker))
+            if mode == "pretrain":
+                torch.save(model.state_dict(), model_ckpts_pretrain)
             if mode == "train":
-                torch.save(model.state_dict(), model_ckpts)
+                torch.save(model.state_dict(), model_ckpts_train)
     if not cross_val:
         break
 
