@@ -10,7 +10,7 @@ TODOs 1/30:
  - figure out how many eps is the best
     - (screen) ge: en, fr:it, 6 eps each
     - po: 11 eps
- - It's sus how train size is much smaller than val and dev, investigate
+ - It's sus how train size is much smaller than val and dev, investigate (ex. 235851 11591 227952 75048)
     - for your final submission you might want to train on everything
  - isolate the evaluation function and test polish dev set on polish to english translation
 

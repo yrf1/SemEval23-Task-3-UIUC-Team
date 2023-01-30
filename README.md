@@ -24,6 +24,7 @@ MarianMT pretrained
 
 GoogleTrans pretrained 
  - (3 eps) micro-F1=0.49203       macro-F1=0.23986
+ - (6 eps) micro-F1=0.46704       macro-F1=0.24399
 
 
 ## English
@@ -33,6 +34,7 @@ MarianMT
 
 GoogleTrans pretrained 
 - (3 eps) micro-F1=0.49635       macro-F1=0.40172
+- (6 eps) micro-F1=0.48050       macro-F1=0.40234
 
 
 ## French
