@@ -16,8 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-#lang = "en"
-lang = "ru"
+lang = "ge"
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
@@ -35,15 +34,11 @@ df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
 print(label_count)
 # LABELS_OF_INTEREST = [k for k,v in label_count.items() if v>=0] #100]
-# LABELS_OF_INTEREST = ["","Loaded_Language","Name_Calling-Labeling","Doubt", 'Questioning_the_Reputation', \
-#         'Appeal_to_Fear-Prejudice', 'Conversation_Killer', 'Appeal_to_Values', 'Exaggeration-Minimisation', \
-#         'Guilt_by_Association']
+# LABELS_OF_INTEREST is all of the labels right now
 LABELS_OF_INTEREST = ["", "Appeal_to_Authority", "Appeal_to_Popularity", "Appeal_to_Values", "Appeal_to_Fear-Prejudice", "Flag_Waving", "Causal_Oversimplification", \
     "False_Dilemma-No_Choice", "Consequential_Oversimplification", "Straw_Man", "Red_Herring", "Whataboutism", "Slogans", "Appeal_to_Time", \
     "Conversation_Killer", "Loaded_Language", "Repetition", "Exaggeration-Minimisation", "Obfuscation-Vagueness-Confusion", "Name_Calling-Labeling", \
     "Doubt", "Guilt_by_Association", "Appeal_to_Hypocrisy", "Questioning_the_Reputation"]
-LABELS_OF_INTEREST_pos_counter = {}
-LABELS_OF_INTEREST_neg_counter = {}
 
 LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
 
@@ -257,7 +252,7 @@ for cross_val_split_idx in range(5):
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
-    model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/ep_2_NLI_"+("pretrain_def" if use_def else "")+".pt"
+    model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/PRETRAIN_def.pt"
 
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
         os.system("mkdir ckpts/"+str(cross_val_split_idx))

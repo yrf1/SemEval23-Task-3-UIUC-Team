@@ -4,6 +4,11 @@ Deadline: submission deadline is 1/30
 
 Our focus is on subtask 3: persuasion techniques
 
+
+TODOs 1/30:
+ - first thing: run on test set and make a submission
+ - isolate the evaluation function and test polish dev set on polish to english translation
+
 TODOs 1/29:
  - skip pretrain on future models because pretrain now takes more than 3 hours
 
