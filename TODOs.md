@@ -7,6 +7,8 @@ Our focus is on subtask 3: persuasion techniques
 
 TODOs 1/30:
  - first thing: run on test set and make a submission
+ - (screen) ge: en, fr:it, 6 eps each
+ - po: 11 eps
  - isolate the evaluation function and test polish dev set on polish to english translation
 
 TODOs 1/29:

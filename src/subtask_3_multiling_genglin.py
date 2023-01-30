@@ -1,6 +1,6 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-ru_def.txt -g data/ru/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-fr_def.txt -g data/fr/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
 import copy
@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-lang = "ge"
+lang = "po" # NOTE: check eps
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
@@ -300,6 +300,7 @@ for cross_val_split_idx in range(5):
                 torch.save(model.state_dict(), model_ckpts_pretrain)
             if mode == "train":
                 model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
+                # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
                 torch.save(model.state_dict(), model_ckpts_train)
     if not cross_val:
         break
