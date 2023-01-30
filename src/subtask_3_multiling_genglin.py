@@ -1,6 +1,6 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-po_def.txt -g data/po/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-ru_def.txt -g data/ru/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
 import copy
