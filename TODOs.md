@@ -7,8 +7,11 @@ Our focus is on subtask 3: persuasion techniques
 
 TODOs 1/30:
  - first thing: run on test set and make a submission
- - (screen) ge: en, fr:it, 6 eps each
- - po: 11 eps
+ - figure out how many eps is the best
+    - (screen) ge: en, fr:it, 6 eps each
+    - po: 11 eps
+ - It's sus how train size is much smaller than val and dev, investigate
+    - for your final submission you might want to train on everything
  - isolate the evaluation function and test polish dev set on polish to english translation
 
 TODOs 1/29:
