@@ -1,6 +1,6 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-it_def.txt -g data/it/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/googletrans-dev-output-subtask3-po_def.txt -g data/po/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
 import copy
@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-lang = "po" # NOTE: check eps
+lang = "fr" # NOTE: check eps
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
@@ -29,6 +29,7 @@ data_dir = "data/"
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" 
 task_label_fname_train = "train-labels-subtask-3.txt"
 task_label_fname_dev = "dev-labels-subtask-3.txt"
+task_label_fname_test = "test-labels-subtask-3.txt"
 df = pd.read_csv("data/"+lang+"/"+task_label_fname_train, sep="\t",header=None)[2].values
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
@@ -46,9 +47,16 @@ LABELS_DEF = pd.read_csv("resources/task3_def.csv",header=None)
 class MyDataset(Dataset):
     def __init__(self, mode="train", cross_val_split_idx=-1, all_labels=None):
         self.data_all, self.data_lang = [], []
-        task_label_fname = task_label_fname_train if mode in \
-                        ["train","pretrain","val"] else task_label_fname_dev
-        self.all_labels = [] if mode not in ["val", "dev"] else all_labels
+        # task_label_fname = task_label_fname_train if mode in \
+        #                 ["train","pretrain","val"] else task_label_fname_dev
+        if mode in ["train","pretrain","val"]:
+            task_label_fname = task_label_fname_train
+        elif mode in ["dev"]:
+            task_label_fname = task_label_fname_dev
+        elif mode in ["test"]:
+            task_label_fname = task_label_fname_test
+        
+        self.all_labels = [] if mode not in ["val", "dev", "test"] else all_labels
         for lang_dir in ["en", "it","ge","fr","po","ru"]: #os.listdir(data_dir):
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
@@ -60,7 +68,7 @@ class MyDataset(Dataset):
                 if d[0] not in seg_map:
                     seg_map[d[0]] = {}
                 seg_map[d[0]][d[1]] = d[-1]
-                if mode in ["val","dev"] and lang_dir==lang:
+                if mode in ["val","dev", "test"] and lang_dir==lang:
                     for lbl in LABELS_OF_INTEREST:
                         lbls_GT_here = []
                         if mode=="val":        
@@ -238,21 +246,24 @@ pretrain_dataset = MyDataset("pretrain")
 pretrain_dataloader = DataLoader(pretrain_dataset, batch_size=BATCH_SIZE, shuffle=True)
 print("pretrain length: ", len(pretrain_dataset))
 
-train_results_tracker, dev_results_tracker  = {}, {}
+train_results_tracker, dev_results_tracker, test_results_tracker = {}, {}, {}
 for cross_val_split_idx in range(5):
     print(cross_val_split_idx, datetime.now())
     train_dataset = MyDataset("train", cross_val_split_idx)
     train_dataloader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True)
     val_dataset = MyDataset("val", cross_val_split_idx, all_labels=train_dataset.all_labels)
-    val_dataloader = DataLoader(val_dataset, batch_size=1, shuffle=True)
+    val_dataloader = DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=True)
     dev_dataset = MyDataset("dev", all_labels=train_dataset.all_labels)
     dev_dataloader = DataLoader(dev_dataset, batch_size=1)
-    print(len(pretrain_dataset), len(train_dataset), len(val_dataset), len(dev_dataset))
+    test_dataset = MyDataset("test", all_labels=train_dataset.all_labels)
+    test_dataloader = DataLoader(test_dataset, batch_size=1)
+    print(len(train_dataset), len(val_dataset), len(dev_dataset), len(test_dataset))
     ## Set Model
     model = AutoModelForSequenceClassification.from_pretrained(model_name).to(device)
     optim = torch.optim.AdamW(model.parameters(), lr=lrate)
     loss = torch.nn.CrossEntropyLoss()
-    model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/PRETRAIN_def.pt"
+    # model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/PRETRAIN_def.pt"
+    model_ckpts_pretrain = "ckpts/"+str(cross_val_split_idx)+"/"+lang+"_def_googletrans.pt"
 
     if not os.path.exists("ckpts/"+str(cross_val_split_idx)):
         os.system("mkdir ckpts/"+str(cross_val_split_idx))
@@ -260,32 +271,35 @@ for cross_val_split_idx in range(5):
         print("loaded ckpt from... " + model_ckpts_pretrain)
         model.load_state_dict(torch.load(model_ckpts_pretrain))
     print("start train")
-    for (mode, tot_eps, dataloader) in [("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
-            ("train",6,train_dataloader), ("dev",1,dev_dataloader)]:
+    for (mode, tot_eps, dataloader) in \
+            [("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
+             ("train",3 if not skip_pretrain else 0,train_dataloader), 
+             ("val", 2, val_dataloader),
+             ("dev",1,dev_dataloader), 
+             ("test",1,test_dataloader)]:
+        # log
+        print("Now running : " + mode)
+        
         if skip_pretrain and mode=="pretrain": 
             continue
-        if mode in ["dev","val","test"]:
+        # if mode in ["dev","val","test"]:
+        if mode in ["dev", "test"]:
             model = model.eval()
         for ep in range(tot_eps):
             loss_tracker = []
             for idx, (fname, segID, x, prop_idx, y) in tqdm(enumerate(dataloader)):
                 optim.zero_grad()
                 out = model(**x)
-                if mode in ["pretrain", "train"]:
+                # if mode in ["pretrain", "train"]:
+                if mode in ["pretrain", "train", "val"]:
                     loss_ = loss(out.logits, y)
                     loss_.backward()
                     loss_tracker.append(loss_.item())
                     optim.step()
-                if mode in ["val","dev"]:
+                # if mode in ["val","dev"]:
+                if mode in ["dev", "test"]:
                     pred_y = out.logits.argmax(1).item()
-                if mode in ["val"]:
-                    if fname not in train_results_tracker:
-                        train_results_tracker[fname] = {}
-                    if segID not in train_results_tracker[fname]:
-                        train_results_tracker[fname][segID] = []
-                    if pred_y>1: # 1 for bart-mNLI!!!
-                        pred_y = dataloader.dataset.all_labels[prop_idx] 
-                        train_results_tracker[fname][segID].append(pred_y)
+
                 if mode in ["dev"]:
                     if fname not in dev_results_tracker:
                         dev_results_tracker[fname] = {}
@@ -294,22 +308,47 @@ for cross_val_split_idx in range(5):
                     if pred_y>1: # 1 for bart-mNLI!!!
                         pred_y = dataloader.dataset.all_labels[prop_idx] 
                         dev_results_tracker[fname][segID].append(pred_y)
+                if mode in ["test"]:
+                    if fname not in test_results_tracker:
+                        test_results_tracker[fname] = {}
+                    if segID not in test_results_tracker[fname]:
+                        test_results_tracker[fname][segID] =[]
+                    if pred_y>1: # 1 for bart-mNLI!!!
+                        pred_y = dataloader.dataset.all_labels[prop_idx] 
+                        test_results_tracker[fname][segID].append(pred_y)
             if mode in ["pretrain", "train"]:
                 print(datetime.now(), sum(loss_tracker)/len(loss_tracker))
             if mode == "pretrain":
                 torch.save(model.state_dict(), model_ckpts_pretrain)
             if mode == "train":
-                model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
+                # TODO: modify here before you go on training
+                model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def_googletrans_test" if use_def else "")+".pt"
                 # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
                 torch.save(model.state_dict(), model_ckpts_train)
+            if mode == "val":
+                model_ckpts_val = "ckpts/val"+lang+("_def_googletrans_val" if use_def else "")+".pt"
+                # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
+                torch.save(model.state_dict(), model_ckpts_val)
+
     if not cross_val:
         break
 
-data = []
+# save dev results
+data_dev = []
 for fname, v in dev_results_tracker.items():
     for segID, pred_y in v.items():
         pred_y = list(set(pred_y))
-        data.append((fname[0], segID[0], ",".join(pred_y)))
-dev_results_tracker = pd.DataFrame(data)
-dev_results_tracker.to_csv("baselines/googletrans-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
+        data_dev.append((fname[0], segID[0], ",".join(pred_y)))
+dev_results_tracker = pd.DataFrame(data_dev)
+dev_results_tracker.to_csv("baselines/submission/googletrans-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
+    sep="\t", index=None, header=None)
+
+# save test set result
+data_test = []
+for fname, v in test_results_tracker.items():
+    for segID, pred_y in v.items():
+        pred_y = list(set(pred_y))
+        data_test.append((fname[0], segID[0], ",".join(pred_y)))
+test_results_tracker = pd.DataFrame(data_test)
+test_results_tracker.to_csv("baselines/submission/googletrans-TEST-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
     sep="\t", index=None, header=None)

@@ -65,6 +65,7 @@ MarianMT
 GoogleTrans
  - (3 eps) micro-F1=0.32061       macro-F1=0.21502
  - (6 eps) micro-F1=0.36923       macro-F1=0.24727
+ - (11 eps) micro-F1=0.37411       macro-F1=0.23668
 
 ## Russian
 
@@ -73,3 +74,9 @@ MarianMT
 
 GoogleTrans
  - (6 eps) micro-F1=0.41674       macro-F1=0.21749
+
+
+
+# Methods
+- Cross-translated the dataset: [en, fr, it, ge, po, ru] all translated into each other. Using this to collect pretrain dataset
+- Pretrained for 3 epochs and saved the checkpoint
