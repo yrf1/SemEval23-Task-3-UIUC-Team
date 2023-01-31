@@ -1,0 +1,515 @@
+24100	1	
+24100	3	
+24100	5	Loaded_Language
+24100	7	
+24100	9	Name_Calling-Labeling,Loaded_Language,Causal_Oversimplification
+24100	11	Loaded_Language,Name_Calling-Labeling
+24100	13	Name_Calling-Labeling
+24100	15	Name_Calling-Labeling
+24100	17	Loaded_Language,Name_Calling-Labeling
+24100	19	Loaded_Language,Doubt
+24100	21	
+24100	23	
+24100	25	
+24100	27	
+24100	29	Loaded_Language
+24100	31	
+24100	33	Name_Calling-Labeling
+24100	35	Loaded_Language,Name_Calling-Labeling
+24102	1	
+24102	3	Loaded_Language
+24102	5	Loaded_Language,Doubt,Name_Calling-Labeling
+24102	7	Loaded_Language,Name_Calling-Labeling,Questioning_the_Reputation
+24102	9	
+24102	11	
+24102	13	Doubt
+24102	15	
+24102	17	
+24102	19	Loaded_Language,Doubt
+24102	21	Name_Calling-Labeling
+24102	23	
+24102	25	Loaded_Language,Slogans
+24102	27	Loaded_Language,Doubt,Name_Calling-Labeling
+24106	1	
+24106	3	
+24106	5	
+24106	7	
+24106	9	Loaded_Language
+24106	11	
+24112	1	Doubt
+24112	3	Doubt
+24112	5	
+24112	7	Doubt
+24112	9	
+24116	1	Loaded_Language
+24116	3	
+24116	5	Name_Calling-Labeling
+24116	7	
+24116	9	Loaded_Language,Doubt
+24116	11	
+24116	13	Loaded_Language
+24116	15	
+24116	17	Loaded_Language,Doubt
+24116	19	
+24116	21	Loaded_Language,Doubt,Questioning_the_Reputation
+24116	23	Causal_Oversimplification
+24116	25	
+24116	27	Loaded_Language,Doubt
+24117	1	Consequential_Oversimplification,Loaded_Language
+24117	3	
+24117	5	
+24117	7	
+24117	9	
+24117	11	Loaded_Language,Appeal_to_Fear-Prejudice
+24117	13	Consequential_Oversimplification
+24117	15	
+24118	1	Loaded_Language,Questioning_the_Reputation
+24118	3	
+24118	5	Name_Calling-Labeling
+24118	7	Doubt
+24118	9	
+24118	11	Loaded_Language,Doubt,Name_Calling-Labeling
+24118	13	
+24118	15	
+24118	17	Name_Calling-Labeling
+24118	19	Doubt
+24118	21	
+24118	23	
+24118	25	
+24118	27	
+24118	29	
+24118	31	
+24118	33	
+24118	35	Loaded_Language,Doubt,Name_Calling-Labeling
+24124	1	
+24124	3	
+24124	5	Appeal_to_Fear-Prejudice
+24124	7	
+24124	9	Loaded_Language,Slogans,Name_Calling-Labeling,Questioning_the_Reputation
+24124	11	
+24124	13	
+24126	1	
+24126	3	
+24126	5	Appeal_to_Fear-Prejudice,Causal_Oversimplification
+24126	7	Loaded_Language,Name_Calling-Labeling
+24126	9	
+24126	11	Loaded_Language,Conversation_Killer
+24126	13	
+24127	1	Loaded_Language
+24127	3	
+24127	5	Doubt
+24127	7	Loaded_Language
+24127	9	Loaded_Language,Doubt
+24127	11	Doubt
+24127	13	
+24127	15	Loaded_Language
+24127	17	
+24127	19	
+24127	21	
+24127	23	Loaded_Language,Doubt,Causal_Oversimplification
+24127	25	Loaded_Language
+24127	27	Consequential_Oversimplification,Loaded_Language,Doubt,Causal_Oversimplification
+24127	29	Loaded_Language,Doubt,Name_Calling-Labeling
+24127	31	Name_Calling-Labeling,Questioning_the_Reputation
+24127	33	
+24127	35	Loaded_Language,Doubt,Name_Calling-Labeling
+24127	37	Doubt
+24127	39	Loaded_Language,Doubt,Name_Calling-Labeling,Questioning_the_Reputation
+24127	41	Loaded_Language
+24127	43	Name_Calling-Labeling,Loaded_Language,Causal_Oversimplification,Questioning_the_Reputation
+24127	45	Appeal_to_Time,Loaded_Language,Name_Calling-Labeling
+24130	1	Loaded_Language
+24130	3	Loaded_Language
+24130	5	Loaded_Language,Name_Calling-Labeling
+24130	7	
+24130	9	
+24130	11	
+24135	1	Loaded_Language
+24135	3	Exaggeration-Minimisation,Loaded_Language,Name_Calling-Labeling
+24135	5	Loaded_Language
+24135	7	Flag_Waving,Loaded_Language
+24135	9	Loaded_Language,Name_Calling-Labeling
+24135	11	Loaded_Language,Slogans,Name_Calling-Labeling
+24138	1	
+24138	3	
+24138	5	
+24138	7	
+24138	9	
+24138	11	Appeal_to_Values
+24138	13	
+24138	15	
+24138	17	
+2414	1	Loaded_Language
+2414	3	Questioning_the_Reputation
+2414	5	Loaded_Language
+2414	7	Loaded_Language
+2414	9	Name_Calling-Labeling,Doubt,Questioning_the_Reputation
+2414	11	
+2414	13	
+2414	15	
+2414	17	Flag_Waving,Conversation_Killer
+2414	19	Loaded_Language
+2414	21	
+24140	1	Loaded_Language,Questioning_the_Reputation
+24140	3	Loaded_Language
+24140	5	
+24140	7	
+24140	9	Loaded_Language
+24140	11	
+24141	1	
+24141	3	
+24141	5	Doubt
+24141	7	
+24141	9	
+24141	11	
+24141	13	Consequential_Oversimplification,Loaded_Language,Doubt
+24154	1	
+24154	3	
+24154	5	Loaded_Language
+24154	7	Questioning_the_Reputation
+24154	9	
+24154	11	
+24154	13	Loaded_Language,Doubt
+24154	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Whataboutism
+24154	17	Loaded_Language,Appeal_to_Hypocrisy
+24154	19	Loaded_Language
+24154	21	
+24156	1	
+24156	3	
+24156	5	Loaded_Language
+24156	7	Loaded_Language
+24156	9	
+24156	11	Loaded_Language,Doubt,Questioning_the_Reputation
+24156	13	Doubt
+24156	15	Doubt
+24156	17	
+24156	19	
+24156	21	Exaggeration-Minimisation,Loaded_Language
+24156	23	Causal_Oversimplification
+24157	1	Loaded_Language
+24157	3	Loaded_Language
+24157	5	Consequential_Oversimplification,Loaded_Language
+24157	7	
+24157	9	Loaded_Language
+24158	1	Loaded_Language,Questioning_the_Reputation
+24158	3	Questioning_the_Reputation
+24158	5	
+24158	7	Loaded_Language
+24158	9	
+24158	11	Consequential_Oversimplification,Causal_Oversimplification
+24158	13	
+24160	1	
+24160	3	
+24160	5	
+24160	7	
+24160	9	Loaded_Language
+24162	1	
+24162	2	
+24162	4	Loaded_Language,Repetition
+24162	5	Loaded_Language
+24162	7	Questioning_the_Reputation
+24162	9	
+24162	10	
+24166	1	Loaded_Language
+24166	3	Loaded_Language,Doubt
+24166	4	Loaded_Language,Doubt
+24166	6	
+24166	8	
+24166	9	Loaded_Language
+24166	10	Loaded_Language
+24166	12	Consequential_Oversimplification,Loaded_Language,Appeal_to_Fear-Prejudice
+24166	13	Doubt
+24166	14	Name_Calling-Labeling
+24166	15	Doubt
+24166	17	Loaded_Language,Slogans,Name_Calling-Labeling
+24166	18	Loaded_Language,Name_Calling-Labeling,Questioning_the_Reputation
+24166	19	Loaded_Language,Doubt
+24169	1	
+24169	2	
+24169	4	Doubt
+24169	6	Loaded_Language
+24169	8	Questioning_the_Reputation
+24169	10	
+24171	1	
+24171	3	
+24171	5	Loaded_Language,Doubt,Questioning_the_Reputation
+24171	7	
+24171	9	Loaded_Language
+24171	11	
+24176	1	
+24176	3	Loaded_Language
+24176	5	Loaded_Language,Name_Calling-Labeling
+24176	7	Name_Calling-Labeling,Questioning_the_Reputation
+24176	9	Loaded_Language
+24176	11	
+24183	1	
+24183	3	
+24183	5	
+24183	7	
+24185	1	
+24185	3	
+24185	5	
+24185	7	Loaded_Language
+24186	1	
+24186	3	
+24186	5	
+24186	7	Loaded_Language,Doubt,Questioning_the_Reputation
+24186	9	Loaded_Language
+24189	1	Loaded_Language,Name_Calling-Labeling
+24189	3	Name_Calling-Labeling
+24189	5	
+24189	7	
+2423	1	
+2423	3	Guilt_by_Association,Loaded_Language,Name_Calling-Labeling
+2423	5	
+2423	7	
+2433	1	
+2433	2	Questioning_the_Reputation
+2433	4	Loaded_Language
+2433	5	
+2433	7	
+2433	8	
+2433	10	
+2433	12	
+2433	14	
+2433	16	Loaded_Language
+2433	17	
+2433	19	
+2433	21	
+2433	23	Loaded_Language,Doubt
+2433	24	
+2433	26	Doubt
+2433	28	Doubt
+2433	30	Loaded_Language,Conversation_Killer
+2433	32	Loaded_Language,Questioning_the_Reputation
+2437	1	
+2437	3	Doubt
+2437	4	
+2437	6	
+2437	7	
+2437	9	
+2437	11	Conversation_Killer
+2455	1	
+2455	3	Name_Calling-Labeling
+2455	5	Doubt
+2455	7	Name_Calling-Labeling,Questioning_the_Reputation
+2455	9	Name_Calling-Labeling
+2455	11	Loaded_Language,Name_Calling-Labeling
+2455	13	Loaded_Language
+2455	15	Questioning_the_Reputation
+2455	17	Doubt
+2455	19	Loaded_Language
+2455	21	Flag_Waving,Loaded_Language
+2455	23	
+2455	25	Flag_Waving,Loaded_Language
+2455	27	
+2455	29	
+2455	31	
+2455	33	Flag_Waving,Name_Calling-Labeling,Repetition
+2455	35	
+2455	37	Name_Calling-Labeling
+2456	1	Loaded_Language,Questioning_the_Reputation
+2456	3	
+2456	5	Loaded_Language,Name_Calling-Labeling,Questioning_the_Reputation
+2456	7	Exaggeration-Minimisation,Name_Calling-Labeling,Questioning_the_Reputation
+2456	8	
+2456	10	
+2456	12	
+2456	14	
+2456	16	
+2456	18	Doubt
+2456	19	
+2456	21	
+2456	23	Loaded_Language,Doubt,Questioning_the_Reputation
+2456	25	
+2456	27	
+2456	29	Loaded_Language
+2456	31	
+2456	33	
+2456	35	
+2456	37	
+2456	39	
+2456	41	
+2456	42	
+2456	44	
+2456	46	Doubt
+2456	48	Loaded_Language
+2456	50	Loaded_Language,Questioning_the_Reputation
+2456	52	Doubt
+2459	1	
+2459	2	Loaded_Language,Questioning_the_Reputation
+2459	4	Loaded_Language,Conversation_Killer
+2459	6	Loaded_Language
+2459	8	Doubt,Repetition
+2459	10	
+2459	12	Loaded_Language,Questioning_the_Reputation
+2459	14	Loaded_Language
+2459	16	
+2459	18	
+2459	20	Loaded_Language,Name_Calling-Labeling,Questioning_the_Reputation
+2459	22	Loaded_Language,Doubt
+2459	24	Loaded_Language,Causal_Oversimplification,Questioning_the_Reputation
+2459	26	Loaded_Language
+2459	28	Loaded_Language,Questioning_the_Reputation
+2459	30	
+2459	32	
+2459	34	
+2459	36	
+2459	38	Questioning_the_Reputation
+2459	40	
+2459	42	
+2461	1	
+2461	3	
+2461	5	
+2461	7	Loaded_Language
+2461	8	
+2461	10	
+2461	11	Doubt,Questioning_the_Reputation
+2469	1	Loaded_Language
+2469	3	
+2469	5	
+2469	7	
+2469	9	Loaded_Language,Name_Calling-Labeling
+2469	11	
+2469	13	Loaded_Language,Doubt,Repetition
+2469	15	
+2469	17	
+2469	19	
+2469	21	
+247	1	Name_Calling-Labeling
+247	3	Loaded_Language,Doubt
+247	5	Loaded_Language,Name_Calling-Labeling
+247	7	
+247	9	Loaded_Language,Doubt
+247	11	
+2473	1	
+2473	3	
+2473	5	
+2473	7	
+2473	9	
+2473	11	
+2475	1	
+2475	3	
+2475	4	
+2475	5	
+2475	6	
+2475	7	
+2479	1	
+2479	3	Consequential_Oversimplification,Loaded_Language,Appeal_to_Fear-Prejudice
+2479	5	
+2479	7	
+2479	10	Doubt
+2479	12	
+2479	14	
+2479	16	
+2479	18	
+2479	20	
+2479	22	
+2479	24	
+2479	26	
+2479	28	
+2482	1	
+2482	3	Appeal_to_Hypocrisy,Loaded_Language,Doubt,Questioning_the_Reputation
+2482	5	Name_Calling-Labeling,Doubt,Questioning_the_Reputation
+2482	7	Loaded_Language
+2482	9	
+2482	11	
+2482	13	
+2482	15	
+2482	17	
+2482	19	
+2482	21	Loaded_Language
+2482	23	
+2482	25	Loaded_Language
+2482	27	Loaded_Language
+2482	29	
+2482	31	
+2482	33	
+2482	35	
+2482	37	
+2482	39	
+2482	41	
+2482	43	
+2482	45	Loaded_Language
+2482	47	Loaded_Language,Doubt,Questioning_the_Reputation
+2482	49	Loaded_Language
+2482	51	Loaded_Language
+2482	53	
+2482	55	
+2482	57	
+2482	59	
+2482	61	
+2482	63	
+2482	65	Loaded_Language,Name_Calling-Labeling,Questioning_the_Reputation
+2482	67	
+2482	69	
+2482	71	Loaded_Language
+2482	73	
+2482	75	Name_Calling-Labeling,Loaded_Language,Questioning_the_Reputation
+2482	77	Loaded_Language,Appeal_to_Hypocrisy
+2482	79	
+2482	81	Loaded_Language,Questioning_the_Reputation
+2482	83	Loaded_Language,Name_Calling-Labeling
+2482	85	
+2482	87	
+2482	89	
+2482	91	
+2482	93	
+2482	95	Loaded_Language
+2482	97	
+2492	1	
+2492	3	
+2492	4	
+2492	6	Flag_Waving,Questioning_the_Reputation
+2492	8	
+2492	10	
+2492	11	Loaded_Language
+2492	13	Loaded_Language,Doubt,Name_Calling-Labeling
+2492	14	
+2492	15	
+2492	17	
+2494	1	
+2494	3	
+2494	4	
+2494	5	Causal_Oversimplification
+2494	7	
+2494	9	Questioning_the_Reputation
+2495	1	Loaded_Language
+2495	3	Appeal_to_Time
+2495	5	
+2495	7	
+2495	9	Loaded_Language
+2495	11	
+2495	13	Appeal_to_Time,Loaded_Language
+2496	1	
+2496	3	
+2496	5	Doubt,Conversation_Killer
+2496	7	
+2496	9	
+2496	11	
+2498	1	
+2498	3	
+2498	5	Consequential_Oversimplification,Doubt
+2498	7	Loaded_Language,Doubt
+2498	9	Doubt
+2498	11	
+2498	13	
+2498	15	
+2498	17	
+2498	19	
+2498	21	
+2498	23	
+2498	25	
+2498	27	Loaded_Language
+2498	29	Doubt
+2498	31	Doubt
+2498	33	
+2498	35	
+2498	37	
+2498	39	
+2498	41	
+2498	43	
+2498	45	Doubt
+2498	47	Loaded_Language
+2498	49	
+2498	51	
