@@ -82,6 +82,8 @@ GoogleTrans
 With 3 eps of val data on pretrain+train checkpoint
  - micro-F1=0.28311       macro-F1=0.14006
 
+po_to_en on English model: micro-F1=0.26642       macro-F1=0.18577
+
 ## Russian
 
 MarianMT

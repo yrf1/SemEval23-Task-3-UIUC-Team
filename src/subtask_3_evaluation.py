@@ -1,6 +1,6 @@
 """
 Running scorer locally:
-python scorers/scorer-subtask-3.py -p baselines/submission/googletrans-dev-output-subtask3-ru_def.txt -g data/ru/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
+python scorers/scorer-subtask-3.py -p baselines/submission/ToEnglish-dev-output-subtask3-en_def.txt -g data/po/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
 import copy
@@ -28,7 +28,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" 
 task_label_fname_train = "train-labels-subtask-3.txt"
-task_label_fname_dev = "po_to_en_dev.txt"
+task_label_fname_dev = "dev-labels-subtask-3.txt" # this is the imposter that's actually translated from po/es/gr/ka lol
 task_label_fname_test = "test-labels-subtask-3.txt"
 # NOTE: here we do everything under the "en" label and just treat the test file as an english test set file
 # and if we do this, manually load the best english checkpoint and do no training. only evaluate on this file
@@ -61,8 +61,8 @@ class MyDataset(Dataset):
             task_label_fname = task_label_fname_test
         
         self.all_labels = [] if mode not in ["val", "dev", "test"] else all_labels
-        # for lang_dir in ["en", "it","ge","fr","po","ru"]: #os.listdir(data_dir):
-        for lang_dir in ["en"]:
+        for lang_dir in ["en", "it","ge","fr","po","ru"]:
+        # for lang_dir in ["en"]:
             labels = pd.read_csv(data_dir+"/"+lang_dir+"/"+task_label_fname, sep="\t", header=None) \
                      if mode in ["train","pretrain","val"] else None
             with open(data_dir+"/"+lang_dir+"/"+task_label_fname.replace(".txt",".template"), "r") as f:
