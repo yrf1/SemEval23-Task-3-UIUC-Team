@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-lang = "ru" # NOTE: check eps
+lang = "en" # NOTE: check eps
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
