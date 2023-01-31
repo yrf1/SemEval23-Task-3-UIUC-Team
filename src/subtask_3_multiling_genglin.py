@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-lang = "en" # NOTE: check eps
+lang = "po" # NOTE: check eps
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
@@ -274,7 +274,7 @@ for cross_val_split_idx in range(5):
     for (mode, tot_eps, dataloader) in \
             [("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
              ("train",3 if not skip_pretrain else 0,train_dataloader), 
-             ("val", 3, val_dataloader),
+             ("val", 0, val_dataloader),
              ("dev",1,dev_dataloader), 
              ("test",1,test_dataloader)]:
         # log
@@ -325,10 +325,10 @@ for cross_val_split_idx in range(5):
                 model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_"+str(ep)+"_NLI_"+lang+("_def_googletrans_test" if use_def else "")+".pt"
                 # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
                 torch.save(model.state_dict(), model_ckpts_train)
-            if mode == "val":
-                model_ckpts_val = "ckpts/val_"+lang+("_def_googletrans_val" if use_def else "")+".pt"
-                # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
-                torch.save(model.state_dict(), model_ckpts_val)
+            # if mode == "val":
+            #     model_ckpts_val = "ckpts/val_"+lang+("_def_googletrans_val" if use_def else "")+".pt"
+            #     # model_ckpts_train = "ckpts/"+str(cross_val_split_idx)+"/ep_11"+"_NLI_"+lang+("_def_googletrans" if use_def else "")+".pt"
+            #     torch.save(model.state_dict(), model_ckpts_val)
 
     if not cross_val:
         break

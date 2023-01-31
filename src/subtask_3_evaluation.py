@@ -29,7 +29,7 @@ data_dir = "data/"
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" 
 task_label_fname_train = "train-labels-subtask-3.txt"
 task_label_fname_dev = "dev-labels-subtask-3.txt" 
-task_label_fname_test = "test-labels-subtask-3.txt" # this is the imposter that's actually translated from po/es/gr/ka lol
+task_label_fname_test = "test-labels-subtask-3.txt" 
 
 df = pd.read_csv("data/"+lang+"/"+task_label_fname_train, sep="\t",header=None)[2].values
 df = ["" if x!=x else x for x in df]
