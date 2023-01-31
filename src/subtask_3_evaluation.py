@@ -28,12 +28,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
 model_name = "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" 
 task_label_fname_train = "train-labels-subtask-3.txt"
-task_label_fname_dev = "dev-labels-subtask-3.txt" # this is the imposter that's actually translated from po/es/gr/ka lol
-task_label_fname_test = "test-labels-subtask-3.txt"
-# NOTE: here we do everything under the "en" label and just treat the test file as an english test set file
-# and if we do this, manually load the best english checkpoint and do no training. only evaluate on this file
-# don't forget to change the path to save results
-# task_label_fname_test = "gr_to_en_dev.txt"
+task_label_fname_dev = "dev-labels-subtask-3.txt" 
+task_label_fname_test = "test-labels-subtask-3.txt" # this is the imposter that's actually translated from po/es/gr/ka lol
+
 df = pd.read_csv("data/"+lang+"/"+task_label_fname_train, sep="\t",header=None)[2].values
 df = ["" if x!=x else x for x in df]
 label_count = Counter([y for x in df for y in x.split(",")])
@@ -286,8 +283,8 @@ for cross_val_split_idx in range(5):
             #  ("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
             #  ("train",3 if not skip_pretrain else 0,train_dataloader), 
             #  ("val", 0, val_dataloader),
-             ("dev",1,dev_dataloader), 
-             ("test",0,test_dataloader)]:
+             ("dev",0,dev_dataloader), 
+             ("test",1,test_dataloader)]:
         # log
         print("Now running : " + mode)
         
@@ -345,21 +342,21 @@ for cross_val_split_idx in range(5):
         break
 
 # save dev results
-data_dev = []
-for fname, v in dev_results_tracker.items():
-    for segID, pred_y in v.items():
-        pred_y = list(set(pred_y))
-        data_dev.append((fname[0], segID[0], ",".join(pred_y)))
-dev_results_tracker = pd.DataFrame(data_dev)
-dev_results_tracker.to_csv("baselines/submission/ToEnglish-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
-    sep="\t", index=None, header=None)
-
-# save test set result
-# data_test = []
-# for fname, v in test_results_tracker.items():
+# data_dev = []
+# for fname, v in dev_results_tracker.items():
 #     for segID, pred_y in v.items():
 #         pred_y = list(set(pred_y))
-#         data_test.append((fname[0], segID[0], ",".join(pred_y)))
-# test_results_tracker = pd.DataFrame(data_test)
-# test_results_tracker.to_csv("baselines/submission/googletrans-TEST-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
+#         data_dev.append((fname[0], segID[0], ",".join(pred_y)))
+# dev_results_tracker = pd.DataFrame(data_dev)
+# dev_results_tracker.to_csv("baselines/submission/ToEnglish-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
 #     sep="\t", index=None, header=None)
+
+# save test set result
+data_test = []
+for fname, v in test_results_tracker.items():
+    for segID, pred_y in v.items():
+        pred_y = list(set(pred_y))
+        data_test.append((fname[0], segID[0], ",".join(pred_y)))
+test_results_tracker = pd.DataFrame(data_test)
+test_results_tracker.to_csv("baselines/submission/ToEnglish-TEST-output-subtask3-ka"+("_def" if use_def else "")+".txt", \
+    sep="\t", index=None, header=None)

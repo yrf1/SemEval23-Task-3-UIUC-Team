@@ -103,4 +103,12 @@ With 3 eps of val data on pretrain+train checkpoint
 
 ## Side Note
 
-German test set is good
+German and italian test set is good
+for the other four languages, submit using the previous checkpoints instead
+
+Steps to translate surprise language to English and evaluate on English model checkpoint:
+ - externally translate the test sets into English
+ - create a temp copy of the original english test set
+ - copy the translated content from es/gr/ka to this file `data/en/test-labels-subtask-3.template`
+ - Do 0 epoch of pretrain/train/val/dev and just 1 epoch of test run
+ - save result in the `baselines/submission` folder
