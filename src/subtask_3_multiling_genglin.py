@@ -16,7 +16,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from transformers import MarianMTModel, MarianTokenizer
 
 ## Initialize Settings
-lang = "po" # NOTE: check eps
+lang = "en" # NOTE: check eps
 lrate = 1e-5 
 BATCH_SIZE = 16
 use_def = True 
@@ -275,7 +275,7 @@ for cross_val_split_idx in range(5):
             [("pretrain",3 if not skip_pretrain else 0,pretrain_dataloader),\
              ("train",3 if not skip_pretrain else 0,train_dataloader), 
              ("val", 0, val_dataloader),
-             ("dev",1,dev_dataloader), 
+             ("dev",0,dev_dataloader), 
              ("test",1,test_dataloader)]:
         # log
         print("Now running : " + mode)
@@ -334,14 +334,14 @@ for cross_val_split_idx in range(5):
         break
 
 # save dev results
-data_dev = []
-for fname, v in dev_results_tracker.items():
-    for segID, pred_y in v.items():
-        pred_y = list(set(pred_y))
-        data_dev.append((fname[0], segID[0], ",".join(pred_y)))
-dev_results_tracker = pd.DataFrame(data_dev)
-dev_results_tracker.to_csv("baselines/submission/googletrans-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
-    sep="\t", index=None, header=None)
+# data_dev = []
+# for fname, v in dev_results_tracker.items():
+#     for segID, pred_y in v.items():
+#         pred_y = list(set(pred_y))
+#         data_dev.append((fname[0], segID[0], ",".join(pred_y)))
+# dev_results_tracker = pd.DataFrame(data_dev)
+# dev_results_tracker.to_csv("baselines/submission/googletrans-dev-output-subtask3-"+lang+("_def" if use_def else "")+".txt", \
+#     sep="\t", index=None, header=None)
 
 # save test set result
 data_test = []

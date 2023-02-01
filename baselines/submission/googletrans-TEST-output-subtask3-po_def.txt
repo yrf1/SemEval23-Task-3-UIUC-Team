@@ -1,0 +1,1006 @@
+351	1	Loaded_Language,Doubt
+351	3	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+351	5	
+351	7	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt
+351	9	Slogans,Loaded_Language,Name_Calling-Labeling
+351	11	
+351	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Slogans,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+351	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+351	17	Loaded_Language,Doubt
+351	19	Name_Calling-Labeling
+351	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Doubt
+351	23	Appeal_to_Values
+351	25	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+351	27	Appeal_to_Hypocrisy,Name_Calling-Labeling,Slogans
+351	29	
+351	31	Name_Calling-Labeling,Doubt
+351	33	Doubt
+351	35	
+351	37	
+351	39	Name_Calling-Labeling
+351	41	Doubt
+351	43	Appeal_to_Fear-Prejudice
+351	45	Loaded_Language
+351	47	Slogans
+351	49	Name_Calling-Labeling,Loaded_Language,Appeal_to_Values
+3510	1	
+3510	3	
+3510	5	Doubt
+3510	7	
+3510	9	
+3510	11	
+3510	13	Doubt
+3510	15	Name_Calling-Labeling
+3510	17	
+3510	19	Doubt
+3510	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3510	23	
+3510	25	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3510	27	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Doubt,Flag_Waving,Appeal_to_Values
+3510	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3510	31	
+3510	33	
+3510	35	Flag_Waving
+3510	37	
+3510	39	
+3510	41	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3510	43	
+3510	45	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3510	47	Doubt
+3510	49	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3510	51	Loaded_Language,Name_Calling-Labeling,Doubt,Exaggeration-Minimisation
+3510	53	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Exaggeration-Minimisation,Doubt
+3510	55	Name_Calling-Labeling,Doubt
+3510	57	
+3510	59	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3510	61	Doubt
+3510	63	
+3510	65	Loaded_Language,Name_Calling-Labeling,Doubt
+3510	67	
+3510	69	Name_Calling-Labeling
+3511	1	
+3511	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3511	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3511	7	Loaded_Language,Name_Calling-Labeling
+3511	9	
+3511	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Doubt
+3511	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Appeal_to_Authority,Conversation_Killer,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Popularity,Appeal_to_Values
+3511	15	Loaded_Language,Name_Calling-Labeling
+3511	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3511	19	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Doubt
+3511	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3511	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3511	25	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Flag_Waving
+3511	27	Name_Calling-Labeling,Loaded_Language,Slogans
+3511	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Flag_Waving,Appeal_to_Values
+3511	31	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	1	
+3512	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3512	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt
+3512	7	
+3512	9	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3512	11	Name_Calling-Labeling
+3512	13	
+3512	15	Name_Calling-Labeling,Doubt
+3512	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	19	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Conversation_Killer,Exaggeration-Minimisation,Doubt,False_Dilemma-No_Choice
+3512	21	
+3512	23	
+3512	25	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3512	27	Loaded_Language,Name_Calling-Labeling,Doubt
+3512	29	
+3512	31	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt,Loaded_Language
+3512	33	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	35	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt
+3512	37	Name_Calling-Labeling,Doubt
+3512	39	
+3512	41	Appeal_to_Hypocrisy,Name_Calling-Labeling,Repetition,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving
+3512	43	Name_Calling-Labeling
+3512	45	Slogans
+3512	47	Loaded_Language,Doubt
+3512	49	Loaded_Language,Name_Calling-Labeling,Doubt
+3512	51	Name_Calling-Labeling
+3512	53	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt,Loaded_Language
+3512	55	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	57	Loaded_Language,Name_Calling-Labeling,Doubt
+3512	59	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	61	Appeal_to_Fear-Prejudice
+3512	63	
+3512	65	Doubt
+3512	67	Loaded_Language,Slogans
+3512	69	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving
+3512	71	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3512	73	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3512	75	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3512	77	Loaded_Language
+3513	1	Doubt
+3513	3	
+3513	5	Doubt
+3513	7	Appeal_to_Hypocrisy,Exaggeration-Minimisation,Name_Calling-Labeling,Doubt
+3513	9	Name_Calling-Labeling,Doubt
+3513	11	
+3513	13	
+3513	15	Doubt
+3513	17	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3513	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	1	Loaded_Language,Name_Calling-Labeling
+3514	3	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3514	5	Flag_Waving,Loaded_Language,Name_Calling-Labeling
+3514	7	
+3514	9	Loaded_Language,Name_Calling-Labeling,Doubt
+3514	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Flag_Waving
+3514	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3514	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3514	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	25	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	27	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Exaggeration-Minimisation,Doubt
+3514	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3514	31	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3514	33	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3514	35	Loaded_Language,Doubt
+3514	37	Questioning_the_Reputation,Name_Calling-Labeling,Doubt
+3514	39	Loaded_Language
+3514	41	
+3514	43	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt,Loaded_Language
+3514	45	Loaded_Language,Name_Calling-Labeling,Doubt
+3514	47	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3514	49	
+3515	1	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3515	3	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3515	5	Appeal_to_Fear-Prejudice,Doubt,Exaggeration-Minimisation
+3515	7	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3515	9	
+3515	11	
+3515	13	
+3515	15	
+3515	17	Flag_Waving,Name_Calling-Labeling
+3515	19	Name_Calling-Labeling
+3515	21	Name_Calling-Labeling
+3515	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Guilt_by_Association
+3515	25	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3515	27	Name_Calling-Labeling
+3515	29	Name_Calling-Labeling
+3515	31	Name_Calling-Labeling,Exaggeration-Minimisation,Appeal_to_Values
+3515	33	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Guilt_by_Association,Appeal_to_Values
+3515	35	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3515	37	
+3515	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3515	41	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt
+3515	43	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving
+3515	45	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3515	47	Appeal_to_Fear-Prejudice,Doubt,Loaded_Language
+3515	49	
+3515	51	
+3515	53	
+3515	55	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Flag_Waving,Appeal_to_Popularity
+3515	57	Appeal_to_Popularity
+3515	59	Name_Calling-Labeling,Doubt
+3515	61	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Doubt
+3516	1	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3516	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Guilt_by_Association
+3516	5	Name_Calling-Labeling
+3516	7	Name_Calling-Labeling
+3516	9	Doubt
+3516	11	
+3516	13	
+3516	15	Name_Calling-Labeling
+3516	17	
+3516	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Slogans,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3516	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3516	23	
+3516	25	Loaded_Language,Name_Calling-Labeling
+3516	27	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3516	29	Name_Calling-Labeling
+3516	31	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3516	33	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3516	35	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Guilt_by_Association
+3516	37	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3516	39	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Causal_Oversimplification,Appeal_to_Authority,Conversation_Killer,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt
+3516	41	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt,Loaded_Language
+3516	43	
+3516	45	Loaded_Language
+3516	47	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3516	49	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3516	51	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3516	53	Loaded_Language,Doubt
+3516	55	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3516	57	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3516	59	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3516	61	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3516	63	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3516	65	Name_Calling-Labeling
+3516	67	
+3516	69	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3516	71	Loaded_Language,Name_Calling-Labeling
+3516	73	Name_Calling-Labeling
+3516	75	
+3516	77	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Values
+3516	79	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3516	81	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3516	83	
+3516	85	Loaded_Language
+3516	87	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Doubt,Appeal_to_Popularity,Appeal_to_Values
+3516	89	
+3516	91	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3516	93	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3516	95	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3516	97	Appeal_to_Hypocrisy,Questioning_the_Reputation,Name_Calling-Labeling,Doubt
+3516	99	Appeal_to_Popularity,Name_Calling-Labeling,Appeal_to_Fear-Prejudice
+3516	101	
+3516	103	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Values
+3516	105	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Guilt_by_Association
+3516	107	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3517	1	Flag_Waving,Conversation_Killer,Exaggeration-Minimisation
+3517	3	Doubt
+3517	5	
+3517	7	Name_Calling-Labeling
+3517	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3517	11	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Popularity
+3517	13	Loaded_Language,Name_Calling-Labeling,Doubt
+3517	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Conversation_Killer,Doubt
+3517	17	
+3518	1	Doubt
+3518	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Causal_Oversimplification,Exaggeration-Minimisation
+3518	5	
+3518	7	Loaded_Language,Name_Calling-Labeling
+3518	9	Name_Calling-Labeling
+3518	11	Questioning_the_Reputation,Name_Calling-Labeling
+3518	13	Loaded_Language,Name_Calling-Labeling
+3518	15	Loaded_Language,Name_Calling-Labeling
+3518	17	
+3518	19	Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3518	21	
+3518	23	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3518	25	Name_Calling-Labeling,Slogans
+3518	27	
+3519	1	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3519	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Whataboutism,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3519	5	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3519	7	Loaded_Language,Name_Calling-Labeling,Doubt
+3519	9	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3519	11	
+3519	13	Loaded_Language,Name_Calling-Labeling
+352	1	
+352	3	
+352	5	
+352	7	Name_Calling-Labeling
+352	9	
+352	11	
+352	13	Name_Calling-Labeling
+352	15	
+352	17	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3520	1	
+3520	3	
+3520	5	
+3520	7	
+3520	9	Exaggeration-Minimisation
+3520	11	Name_Calling-Labeling
+3520	13	
+3520	15	Loaded_Language,Name_Calling-Labeling
+3520	17	
+3520	19	Name_Calling-Labeling
+3520	21	
+3520	23	Name_Calling-Labeling
+3520	25	
+3520	27	Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3520	29	Name_Calling-Labeling
+3520	31	
+3520	33	Loaded_Language,Name_Calling-Labeling,Doubt,Exaggeration-Minimisation
+3520	35	Name_Calling-Labeling
+3520	37	
+3520	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3520	41	
+3520	43	Name_Calling-Labeling
+3520	45	Loaded_Language
+3520	47	Name_Calling-Labeling
+3520	49	
+3520	51	Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3520	53	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Exaggeration-Minimisation,Doubt
+3520	55	
+3520	57	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Guilt_by_Association
+3520	59	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3520	61	Appeal_to_Hypocrisy,Name_Calling-Labeling
+3520	63	
+3520	65	Doubt
+3520	67	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3520	69	Name_Calling-Labeling
+3520	71	
+3520	73	
+3520	75	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Guilt_by_Association
+3520	77	
+3521	1	Flag_Waving
+3521	3	Name_Calling-Labeling,Appeal_to_Values
+3521	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+3522	1	Appeal_to_Fear-Prejudice
+3522	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3522	5	
+3522	7	Name_Calling-Labeling
+3522	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Conversation_Killer,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3522	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt
+3522	13	Name_Calling-Labeling,Doubt
+3522	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+3522	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Doubt,Guilt_by_Association,Flag_Waving
+3522	19	Name_Calling-Labeling,Appeal_to_Authority
+3522	21	
+3522	23	
+3522	25	Appeal_to_Fear-Prejudice,Doubt
+3522	27	Name_Calling-Labeling
+3522	29	Flag_Waving,Appeal_to_Fear-Prejudice,Doubt,Loaded_Language
+3522	31	Flag_Waving,Appeal_to_Fear-Prejudice,Loaded_Language
+3522	33	Appeal_to_Hypocrisy,Flag_Waving,Loaded_Language,Name_Calling-Labeling
+3522	35	Flag_Waving,Doubt
+3522	37	Exaggeration-Minimisation,Name_Calling-Labeling,Doubt
+3522	39	Flag_Waving,Doubt
+3522	41	Name_Calling-Labeling,Doubt
+3522	43	Appeal_to_Fear-Prejudice,Doubt
+3522	45	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3522	47	Doubt
+3522	49	
+3522	51	Questioning_the_Reputation,Flag_Waving,Name_Calling-Labeling,Doubt
+3522	53	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3522	55	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3522	57	Doubt
+3522	59	
+3522	61	
+3522	63	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Appeal_to_Values
+3522	65	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3522	67	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3522	69	Name_Calling-Labeling
+3522	71	Name_Calling-Labeling,Appeal_to_Values
+3522	73	Name_Calling-Labeling
+3522	75	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Flag_Waving,Appeal_to_Values
+3522	77	Doubt
+3522	79	Doubt
+3522	81	Loaded_Language,Doubt
+3522	83	
+3523	1	
+3523	3	
+3523	5	Name_Calling-Labeling
+3523	7	
+3523	9	Loaded_Language,Doubt
+3523	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3523	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Conversation_Killer,Exaggeration-Minimisation,Doubt,Flag_Waving
+3523	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+3523	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving
+3523	19	Name_Calling-Labeling
+3523	21	Appeal_to_Hypocrisy,Name_Calling-Labeling
+3523	23	
+3523	25	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	27	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	29	Name_Calling-Labeling
+3523	31	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3523	33	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3523	35	
+3523	37	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	39	
+3523	41	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	43	
+3523	45	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3523	47	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	49	Loaded_Language,Name_Calling-Labeling
+3523	51	
+3523	53	
+3523	55	Doubt
+3523	57	Name_Calling-Labeling
+3523	59	Name_Calling-Labeling,Doubt
+3523	61	
+3523	63	Name_Calling-Labeling
+3523	65	Name_Calling-Labeling
+3523	67	Appeal_to_Hypocrisy,Name_Calling-Labeling
+3523	69	Loaded_Language,Name_Calling-Labeling,Doubt
+3523	71	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3523	73	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Doubt,Flag_Waving
+3523	75	Flag_Waving,Loaded_Language,Name_Calling-Labeling
+3523	77	
+3523	79	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3523	81	
+3523	83	
+3523	85	
+3523	87	
+3523	89	
+3523	91	Name_Calling-Labeling
+3523	93	
+3523	95	
+3523	97	
+3523	99	
+3523	101	Name_Calling-Labeling,Doubt
+3523	103	
+3523	105	
+3523	107	Name_Calling-Labeling
+3523	109	
+3523	111	
+3523	113	Name_Calling-Labeling
+3523	115	Name_Calling-Labeling
+3523	117	Name_Calling-Labeling
+3523	119	Name_Calling-Labeling
+3523	121	
+3523	123	Name_Calling-Labeling
+3523	125	
+3523	127	Name_Calling-Labeling
+3523	129	
+3523	131	
+3523	133	
+3523	135	
+3523	137	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt
+3523	139	
+3523	141	Name_Calling-Labeling,Doubt
+3523	143	Name_Calling-Labeling
+3524	1	
+3524	3	Loaded_Language
+3524	5	
+3524	7	Name_Calling-Labeling
+3524	9	
+3524	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3524	13	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3524	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Flag_Waving
+3524	17	Name_Calling-Labeling
+3524	19	
+3524	21	
+3524	23	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3524	25	
+3524	27	
+3524	29	Appeal_to_Hypocrisy,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3524	31	Name_Calling-Labeling
+3524	33	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3524	35	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3524	37	
+3524	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3524	41	
+3524	43	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation
+3524	45	
+3524	47	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3524	49	Appeal_to_Hypocrisy,Questioning_the_Reputation,Name_Calling-Labeling,Doubt
+3524	51	Flag_Waving,Loaded_Language,Name_Calling-Labeling,Doubt
+3524	53	Loaded_Language,Name_Calling-Labeling,Doubt
+3525	1	Appeal_to_Popularity
+3525	3	Name_Calling-Labeling
+3525	5	
+3525	7	
+3525	9	Doubt
+3525	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3525	13	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Flag_Waving
+3525	15	Loaded_Language,Name_Calling-Labeling
+3525	17	Flag_Waving,Conversation_Killer
+3525	19	
+3525	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3525	23	
+3525	25	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt
+3525	27	Conversation_Killer,Appeal_to_Popularity,Doubt,Loaded_Language
+3525	29	Name_Calling-Labeling,Doubt
+3525	31	
+3525	33	Loaded_Language,Name_Calling-Labeling,Doubt
+3525	35	Loaded_Language,Slogans,Doubt
+3525	37	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3525	39	Doubt
+3525	41	Name_Calling-Labeling,Doubt
+3525	43	Conversation_Killer,Doubt
+3525	45	
+3525	47	Loaded_Language,Name_Calling-Labeling,Doubt
+3525	49	Name_Calling-Labeling
+3525	51	
+3525	53	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3525	55	
+3525	57	Appeal_to_Values
+3525	59	
+3525	61	
+3525	63	Doubt
+3525	65	Loaded_Language
+3525	67	Doubt
+3525	69	Loaded_Language
+3525	71	Slogans
+3525	73	Conversation_Killer,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3525	75	Loaded_Language,Doubt
+3525	77	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3525	79	Loaded_Language
+3525	81	Name_Calling-Labeling
+3525	83	
+3525	85	Appeal_to_Hypocrisy,Name_Calling-Labeling
+3525	87	
+3525	89	Name_Calling-Labeling
+3525	91	Questioning_the_Reputation,Name_Calling-Labeling,Flag_Waving,Doubt
+3525	93	
+3525	95	
+3525	97	Name_Calling-Labeling,Doubt
+3525	99	
+3525	101	
+3525	103	
+3525	105	
+3526	1	Name_Calling-Labeling
+3526	3	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3526	5	Name_Calling-Labeling
+3526	7	Appeal_to_Hypocrisy,Flag_Waving,Loaded_Language,Name_Calling-Labeling
+3526	9	Flag_Waving,Name_Calling-Labeling,Doubt
+3526	11	Loaded_Language,Name_Calling-Labeling
+3526	13	
+3526	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3526	17	Loaded_Language,Name_Calling-Labeling,Doubt
+3526	19	
+3526	21	
+3526	23	
+3526	25	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3526	27	Loaded_Language
+3526	29	
+3526	31	Loaded_Language
+3526	33	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3526	35	Loaded_Language
+3526	37	
+3526	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Slogans,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+3527	1	Loaded_Language,Name_Calling-Labeling
+3527	3	
+3527	5	
+3527	7	Name_Calling-Labeling
+3527	9	Name_Calling-Labeling,Doubt
+3527	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3527	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Doubt
+3527	15	Name_Calling-Labeling
+3527	17	Loaded_Language,Name_Calling-Labeling,Doubt
+3527	19	
+3527	21	
+3527	23	Doubt
+3527	25	
+3528	1	Name_Calling-Labeling
+3528	3	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Causal_Oversimplification,Doubt
+3528	5	Loaded_Language,Name_Calling-Labeling,Doubt
+3528	7	
+3528	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3528	11	Name_Calling-Labeling
+3529	1	
+3529	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+3529	5	Appeal_to_Fear-Prejudice,Doubt,Loaded_Language
+3529	7	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3529	9	Flag_Waving,Name_Calling-Labeling
+3529	11	Flag_Waving,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3529	13	Flag_Waving,Name_Calling-Labeling,Loaded_Language,Appeal_to_Values
+3529	15	Name_Calling-Labeling,Doubt
+3529	17	
+3529	19	
+3529	21	
+3529	23	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+353	1	
+353	3	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+353	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+353	7	Loaded_Language,Doubt
+353	9	Loaded_Language,Name_Calling-Labeling
+353	11	
+3530	1	Loaded_Language
+3530	3	Appeal_to_Fear-Prejudice,Appeal_to_Values,Loaded_Language
+3530	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3530	7	Loaded_Language
+3530	9	Loaded_Language,Name_Calling-Labeling
+3530	11	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+3530	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Flag_Waving,Appeal_to_Values
+3530	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Exaggeration-Minimisation,Flag_Waving,Appeal_to_Values
+3530	17	Loaded_Language,Name_Calling-Labeling,Doubt
+3530	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3530	21	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Red_Herring,Appeal_to_Popularity,Appeal_to_Values
+3530	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3530	25	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Exaggeration-Minimisation
+3530	27	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3530	29	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3530	31	
+3530	33	Exaggeration-Minimisation,Name_Calling-Labeling,Doubt
+3530	35	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Appeal_to_Values
+3530	37	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+3530	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Slogans,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3530	41	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3530	43	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3530	45	Name_Calling-Labeling,Loaded_Language,Appeal_to_Values
+3530	47	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3530	49	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3530	51	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3530	53	
+3530	55	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3530	57	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Exaggeration-Minimisation,Doubt
+3531	1	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Doubt,Loaded_Language
+3531	3	Loaded_Language,Name_Calling-Labeling,Doubt
+3531	5	
+3531	7	Doubt
+3531	9	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+3531	11	Appeal_to_Hypocrisy,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3531	13	Loaded_Language
+3531	15	Loaded_Language,Name_Calling-Labeling
+3531	17	Appeal_to_Fear-Prejudice,Loaded_Language
+3531	19	Name_Calling-Labeling
+3531	21	Loaded_Language,Name_Calling-Labeling
+3531	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3531	25	Loaded_Language,Name_Calling-Labeling
+3531	27	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3531	29	Loaded_Language,Doubt
+3532	1	
+3532	3	
+3532	5	
+3532	7	
+3532	9	
+3532	11	
+3532	13	
+3532	15	
+3532	17	
+3533	1	
+3533	3	
+3533	5	Name_Calling-Labeling
+3533	7	
+3533	9	
+3533	11	
+3533	13	
+3533	15	Appeal_to_Fear-Prejudice
+3533	17	
+3533	19	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Appeal_to_Authority,Doubt
+3533	21	
+3534	1	
+3534	3	
+3534	5	
+3534	7	
+3534	9	
+3534	11	
+3534	13	
+3534	15	
+3534	17	Name_Calling-Labeling
+3534	19	
+3534	21	
+3534	23	
+3535	1	
+3535	3	
+3535	5	
+3535	7	
+3535	9	
+3535	11	Appeal_to_Fear-Prejudice,Name_Calling-Labeling
+3535	13	
+3535	15	
+3535	17	Loaded_Language,Doubt
+3535	19	Loaded_Language,Name_Calling-Labeling
+3536	1	
+3536	3	
+3536	5	
+3536	7	Name_Calling-Labeling
+3536	9	
+3536	11	
+3536	13	
+3537	1	
+3537	3	
+3537	5	
+3537	7	Name_Calling-Labeling
+3537	9	
+3537	11	
+3537	13	
+3538	1	Loaded_Language,Name_Calling-Labeling
+3538	3	Name_Calling-Labeling,Slogans,Doubt
+3538	5	
+3538	7	
+3538	9	Appeal_to_Fear-Prejudice
+3538	11	
+3538	13	
+3538	15	Loaded_Language,Name_Calling-Labeling
+3538	17	Name_Calling-Labeling,Slogans
+3538	19	
+3539	1	
+3539	3	
+3539	5	
+3539	7	
+3539	9	
+3539	11	Name_Calling-Labeling
+3539	13	
+3539	15	
+3539	17	
+3539	19	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Doubt
+3539	21	
+3539	23	
+3539	25	
+3539	27	
+3539	29	
+3539	31	
+3539	33	
+3539	35	
+3539	37	
+3539	39	
+354	1	Appeal_to_Fear-Prejudice,Appeal_to_Time,Loaded_Language,Exaggeration-Minimisation
+354	3	Appeal_to_Values
+354	5	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+354	7	Name_Calling-Labeling,Doubt
+354	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+354	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Repetition,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Appeal_to_Values
+354	13	Loaded_Language
+354	15	Name_Calling-Labeling,Appeal_to_Popularity,Appeal_to_Values
+354	17	Appeal_to_Values
+354	19	
+354	21	
+354	23	Loaded_Language
+354	25	Appeal_to_Fear-Prejudice,Doubt,Exaggeration-Minimisation
+354	27	Appeal_to_Fear-Prejudice,Loaded_Language
+354	29	Appeal_to_Fear-Prejudice
+354	31	Loaded_Language,Name_Calling-Labeling
+354	33	
+354	35	Appeal_to_Hypocrisy,Exaggeration-Minimisation
+354	37	
+354	39	Appeal_to_Values
+354	41	
+354	43	Appeal_to_Popularity,Loaded_Language
+354	45	Loaded_Language,Name_Calling-Labeling
+354	47	
+354	49	Appeal_to_Values
+3540	1	
+3540	3	
+3540	5	
+3540	7	
+3540	9	
+3540	11	
+3540	13	
+3540	15	
+3540	17	
+3541	1	Loaded_Language,Name_Calling-Labeling
+3541	3	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation
+3541	5	
+3541	7	
+3541	9	Name_Calling-Labeling
+3541	11	Name_Calling-Labeling
+3541	13	
+3541	15	
+3541	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Values
+3541	19	Name_Calling-Labeling
+3541	21	
+3541	23	Loaded_Language
+3541	25	
+3541	27	Name_Calling-Labeling
+3541	29	Doubt
+3541	31	
+3541	33	
+3541	35	Appeal_to_Fear-Prejudice,Doubt,Exaggeration-Minimisation
+3541	37	Questioning_the_Reputation,Name_Calling-Labeling
+3541	39	
+3541	41	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3541	43	
+3541	45	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3542	1	Loaded_Language,Name_Calling-Labeling
+3542	3	Loaded_Language
+3542	5	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+3542	7	Name_Calling-Labeling
+3542	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3542	11	Loaded_Language,Name_Calling-Labeling
+3543	1	Loaded_Language
+3543	3	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3543	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Appeal_to_Values
+3543	7	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt
+3543	9	Loaded_Language,Doubt
+3543	11	
+3543	13	Loaded_Language,Slogans
+3543	15	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Flag_Waving,Appeal_to_Values
+3543	17	
+3543	19	Loaded_Language,Appeal_to_Fear-Prejudice
+3543	21	
+3544	1	Loaded_Language
+3544	3	Loaded_Language
+3544	5	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3544	7	
+3544	9	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3544	11	Questioning_the_Reputation,Appeal_to_Popularity,Name_Calling-Labeling,Loaded_Language
+3544	13	Loaded_Language,Doubt
+3544	15	Loaded_Language,Name_Calling-Labeling
+3544	17	Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3544	19	Loaded_Language
+3544	21	
+3544	23	Loaded_Language,Name_Calling-Labeling
+3544	25	Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Loaded_Language
+3544	27	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3544	29	
+3544	31	Flag_Waving,Doubt
+3544	33	Loaded_Language,Name_Calling-Labeling
+3544	35	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+3544	37	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3544	39	Loaded_Language,Name_Calling-Labeling,Doubt
+3544	41	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3544	43	
+3544	45	
+3544	47	
+3544	49	Slogans
+3544	51	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3544	53	Name_Calling-Labeling,Loaded_Language,Slogans
+3544	55	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3544	57	
+3544	59	Loaded_Language,Name_Calling-Labeling,Doubt
+3544	61	Loaded_Language,Name_Calling-Labeling,Doubt
+3544	63	
+3544	65	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3544	67	Loaded_Language,Name_Calling-Labeling,Doubt
+3544	69	Name_Calling-Labeling
+3544	71	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3544	73	Doubt,Causal_Oversimplification
+3544	75	
+3544	77	
+3544	79	
+3544	80	
+3544	82	
+3545	1	Loaded_Language,Name_Calling-Labeling
+3545	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3545	5	Loaded_Language,Name_Calling-Labeling
+3545	7	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3545	9	Loaded_Language,Name_Calling-Labeling
+3545	11	Name_Calling-Labeling,Doubt
+3545	13	Appeal_to_Values
+3545	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+3545	17	Loaded_Language,Name_Calling-Labeling,Doubt
+3545	19	Loaded_Language,Name_Calling-Labeling
+3545	21	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3545	23	
+3545	25	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3545	27	Doubt
+3546	1	
+3546	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+3546	5	Conversation_Killer
+3546	7	Loaded_Language,Name_Calling-Labeling,Doubt,Exaggeration-Minimisation
+3546	9	
+3546	11	Loaded_Language,Name_Calling-Labeling,Doubt
+3546	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Popularity,Appeal_to_Values
+3546	15	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+3546	17	
+3546	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt
+3546	21	Loaded_Language,Name_Calling-Labeling
+3546	23	
+3546	25	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+3546	27	Name_Calling-Labeling,Doubt
+3546	29	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Doubt
+3546	31	Loaded_Language
+3546	33	
+3546	35	
+3546	37	
+3546	39	Name_Calling-Labeling
+3546	41	
+3546	43	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+3546	45	Name_Calling-Labeling
+3546	47	Loaded_Language,Name_Calling-Labeling
+3546	49	
+3546	51	Name_Calling-Labeling
+3546	53	
+3546	55	
+3546	57	Name_Calling-Labeling
+3546	59	
+3546	61	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3546	63	
+3546	65	Loaded_Language,Name_Calling-Labeling
+3546	67	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+3546	69	
+3546	71	
+3546	73	Doubt
+3546	75	
+3546	77	Doubt
+3546	79	
+3546	81	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3546	83	
+3546	85	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Doubt,Flag_Waving
+3546	87	Doubt
+3546	89	Name_Calling-Labeling,Doubt
+3546	91	Flag_Waving,Doubt
+3546	93	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3546	95	
+3546	97	Doubt
+3546	99	
+3546	101	Doubt
+3546	103	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+3546	105	Appeal_to_Hypocrisy,Doubt
+3546	107	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+3546	109	Loaded_Language,Name_Calling-Labeling,Doubt
+3546	111	Loaded_Language,Name_Calling-Labeling
+3546	113	
+3547	1	
+3547	3	Name_Calling-Labeling,Doubt
+3547	5	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+3547	7	Appeal_to_Popularity,Doubt,Loaded_Language
+3547	9	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Causal_Oversimplification,Conversation_Killer,Exaggeration-Minimisation,Doubt,Flag_Waving
+3547	11	Flag_Waving,Loaded_Language,Doubt
+3547	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Appeal_to_Values
+3547	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+3547	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Consequential_Oversimplification,Doubt
+355	1	Name_Calling-Labeling
+355	3	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Appeal_to_Values
+355	5	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Guilt_by_Association,Appeal_to_Values
+355	7	
+355	9	Name_Calling-Labeling
+355	11	Loaded_Language,Doubt
+355	13	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Popularity,Appeal_to_Values
+355	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+355	17	Loaded_Language,Name_Calling-Labeling,Doubt,Exaggeration-Minimisation
+355	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+355	21	
+355	23	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Appeal_to_Authority,Conversation_Killer,Whataboutism,Exaggeration-Minimisation,Doubt,Appeal_to_Popularity,Appeal_to_Values
+355	25	Appeal_to_Hypocrisy,Name_Calling-Labeling
+355	27	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+355	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Loaded_Language,Doubt,Appeal_to_Values
+355	31	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Flag_Waving
+355	33	
+355	35	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Appeal_to_Authority,Conversation_Killer,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Popularity,Appeal_to_Values
+355	37	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Causal_Oversimplification,Appeal_to_Authority,Conversation_Killer,Obfuscation-Vagueness-Confusion,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Guilt_by_Association,Appeal_to_Values
+355	39	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+355	41	
+355	43	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+355	45	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Appeal_to_Values
+355	47	
+355	49	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+355	51	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Values
+356	1	Name_Calling-Labeling
+356	3	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+356	5	Questioning_the_Reputation,Doubt
+356	7	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+356	9	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association
+356	11	
+356	13	Name_Calling-Labeling
+356	15	Loaded_Language,Name_Calling-Labeling
+356	17	Loaded_Language,Name_Calling-Labeling
+356	19	Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+356	21	
+356	23	
+356	25	Loaded_Language,Name_Calling-Labeling
+356	27	Appeal_to_Fear-Prejudice
+356	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Guilt_by_Association,Flag_Waving
+356	31	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt
+356	33	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+356	35	Name_Calling-Labeling,Doubt
+356	37	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+356	39	Appeal_to_Hypocrisy,Questioning_the_Reputation,Appeal_to_Values,Name_Calling-Labeling
+356	41	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Causal_Oversimplification,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Flag_Waving,Appeal_to_Values,False_Dilemma-No_Choice
+356	43	Loaded_Language,Name_Calling-Labeling
+356	45	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+356	47	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+356	49	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+356	51	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+356	53	
+356	55	Name_Calling-Labeling
+356	57	Name_Calling-Labeling,Doubt
+356	59	Name_Calling-Labeling
+356	61	Loaded_Language,Name_Calling-Labeling
+356	63	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation
+356	65	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+356	67	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+356	69	Loaded_Language,Name_Calling-Labeling
+356	71	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+356	73	Flag_Waving,Appeal_to_Fear-Prejudice,Doubt
+356	75	Loaded_Language,Name_Calling-Labeling,Doubt,Exaggeration-Minimisation
+356	77	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt
+356	79	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Doubt
+356	81	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+356	83	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt
+356	85	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Appeal_to_Values
+356	87	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving,Appeal_to_Values
+356	89	Loaded_Language,Name_Calling-Labeling
+357	1	Loaded_Language,Name_Calling-Labeling
+357	3	
+357	5	
+357	7	
+357	9	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Consequential_Oversimplification,Doubt
+357	11	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+357	13	Loaded_Language,Name_Calling-Labeling
+357	15	
+358	1	Name_Calling-Labeling
+358	3	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+358	5	
+358	7	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+358	9	Loaded_Language,Name_Calling-Labeling,Doubt
+358	11	Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling,Doubt
+358	13	
+358	15	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Doubt,Appeal_to_Popularity,Appeal_to_Values
+358	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Doubt
+358	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Doubt,Guilt_by_Association,Flag_Waving
+358	21	Name_Calling-Labeling,Doubt
+358	23	Name_Calling-Labeling
+358	25	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt
+358	27	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling,Doubt
+358	29	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Conversation_Killer,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+358	31	
+358	33	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt,Appeal_to_Values
+358	35	
+358	37	Appeal_to_Hypocrisy,Questioning_the_Reputation,Loaded_Language,Name_Calling-Labeling
+358	39	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Doubt
+358	41	Slogans,Appeal_to_Values
+358	43	
+358	45	Loaded_Language,Name_Calling-Labeling,Doubt
+358	47	Name_Calling-Labeling,Doubt
+359	1	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Slogans,Doubt
+359	3	Appeal_to_Hypocrisy,Loaded_Language,Name_Calling-Labeling
+359	5	
+359	7	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Causal_Oversimplification,Conversation_Killer,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Flag_Waving,Appeal_to_Values
+359	9	Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Doubt
+359	11	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Flag_Waving
+359	13	
+359	15	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Consequential_Oversimplification,Doubt
+359	17	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Loaded_Language,Exaggeration-Minimisation,Doubt,Guilt_by_Association,Appeal_to_Values
+359	19	Appeal_to_Hypocrisy,Name_Calling-Labeling,Questioning_the_Reputation,Appeal_to_Fear-Prejudice,Loaded_Language,Exaggeration-Minimisation,Consequential_Oversimplification,Doubt,Flag_Waving,Appeal_to_Values
