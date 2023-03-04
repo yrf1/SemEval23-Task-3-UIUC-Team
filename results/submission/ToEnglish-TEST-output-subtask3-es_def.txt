@@ -1,0 +1,330 @@
+371	1	Loaded_Language
+371	3	Appeal_to_Fear-Prejudice
+371	5	Exaggeration-Minimisation,Appeal_to_Fear-Prejudice,Loaded_Language,Name_Calling-Labeling
+371	7	Exaggeration-Minimisation,Loaded_Language,Appeal_to_Authority,Name_Calling-Labeling
+371	9	Loaded_Language
+371	11	Appeal_to_Fear-Prejudice,Loaded_Language,False_Dilemma-No_Choice
+371	13	Appeal_to_Fear-Prejudice
+3710	1	
+3710	3	
+3710	5	
+3710	7	
+3710	9	
+3710	11	
+3710	13	Name_Calling-Labeling
+3710	15	Name_Calling-Labeling,Appeal_to_Fear-Prejudice
+3710	17	Loaded_Language
+3710	19	
+3710	21	
+3710	23	
+3710	25	
+3710	27	
+3711	1	Name_Calling-Labeling,Loaded_Language
+3711	3	Appeal_to_Fear-Prejudice,Loaded_Language
+3711	5	Loaded_Language,Repetition
+3711	7	Exaggeration-Minimisation,Appeal_to_Fear-Prejudice,Loaded_Language
+3711	9	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Appeal_to_Authority,Flag_Waving
+3711	11	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Flag_Waving
+3711	13	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+3711	15	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Appeal_to_Popularity,Conversation_Killer,Doubt,Causal_Oversimplification,Flag_Waving
+3711	17	
+3711	19	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling,Appeal_to_Authority,Guilt_by_Association,Doubt
+3711	21	Doubt,Loaded_Language,Repetition
+3711	23	Name_Calling-Labeling,Doubt,Loaded_Language
+3711	25	Loaded_Language,Repetition
+3712	1	
+3712	3	
+3712	5	Appeal_to_Fear-Prejudice
+3712	7	Loaded_Language
+3712	9	Name_Calling-Labeling
+3712	11	Name_Calling-Labeling,Doubt,Loaded_Language
+3712	13	Appeal_to_Fear-Prejudice
+3713	1	
+3713	3	
+3713	5	Flag_Waving
+3713	7	
+3713	9	
+3713	11	Appeal_to_Authority
+3713	13	
+3713	15	
+3713	17	
+3713	19	
+3713	21	
+3713	23	
+3713	25	Exaggeration-Minimisation
+3714	1	Name_Calling-Labeling,Loaded_Language
+3714	3	Name_Calling-Labeling,Loaded_Language,Repetition
+3714	5	Appeal_to_Fear-Prejudice,Loaded_Language
+3714	7	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language
+3714	9	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Doubt,Causal_Oversimplification
+3714	11	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt,Causal_Oversimplification
+3714	13	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Causal_Oversimplification
+3714	15	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition
+3714	17	Loaded_Language
+3714	19	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+3714	21	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Causal_Oversimplification
+3715	1	Name_Calling-Labeling,Guilt_by_Association,Loaded_Language
+3715	3	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Guilt_by_Association,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy
+3715	5	Name_Calling-Labeling,Loaded_Language
+3715	7	Loaded_Language
+3715	9	Name_Calling-Labeling,Loaded_Language,Appeal_to_Fear-Prejudice,Causal_Oversimplification
+3715	11	Exaggeration-Minimisation,Loaded_Language,Name_Calling-Labeling
+3715	13	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling
+3715	15	Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer
+3716	1	
+3716	3	Loaded_Language
+3716	5	Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Appeal_to_Authority,Conversation_Killer
+3716	7	Exaggeration-Minimisation,Loaded_Language,Name_Calling-Labeling
+3716	9	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Appeal_to_Authority
+3716	11	Slogans,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Appeal_to_Authority
+3716	13	Loaded_Language,Exaggeration-Minimisation,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling,Doubt
+3716	15	
+3716	17	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+3716	19	
+3716	21	Loaded_Language,Repetition
+3716	23	Slogans,Repetition,False_Dilemma-No_Choice
+3717	1	
+3717	3	Loaded_Language,Repetition,False_Dilemma-No_Choice
+3717	5	Slogans,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+3717	7	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer
+3718	1	
+3718	3	Name_Calling-Labeling,Repetition
+3718	5	
+3718	7	Name_Calling-Labeling,Loaded_Language
+3718	9	
+3718	11	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Guilt_by_Association
+3718	13	
+3718	15	Appeal_to_Fear-Prejudice,Loaded_Language
+3718	17	
+3718	19	Name_Calling-Labeling,Loaded_Language
+3718	21	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Guilt_by_Association
+3718	23	
+3718	25	
+3718	27	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt,Causal_Oversimplification
+3718	29	
+3718	31	
+3718	33	
+3718	35	Name_Calling-Labeling,Doubt,Loaded_Language,Repetition
+3718	37	Doubt,Loaded_Language
+3718	39	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling,Doubt,Causal_Oversimplification
+3718	41	Slogans,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer,Flag_Waving
+3718	43	Name_Calling-Labeling,Doubt,Loaded_Language
+3718	45	
+3718	47	
+3718	49	Slogans,Conversation_Killer,Loaded_Language,Repetition
+3718	51	Slogans
+3718	53	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice
+3718	55	
+3718	57	
+3718	59	Name_Calling-Labeling,Loaded_Language
+3718	61	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Guilt_by_Association,Doubt,Causal_Oversimplification
+3718	63	Doubt,Loaded_Language
+3718	65	
+3718	67	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer,Doubt
+3718	69	
+3718	71	
+3718	73	
+3718	75	Doubt
+3718	77	Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling
+3719	1	Doubt,Loaded_Language
+3719	3	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling
+3719	5	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+3719	7	
+372	1	
+372	3	
+372	5	
+372	7	Loaded_Language
+372	9	
+372	11	Loaded_Language
+372	13	
+372	15	Exaggeration-Minimisation,Loaded_Language
+372	17	Name_Calling-Labeling,Loaded_Language
+372	19	Loaded_Language,False_Dilemma-No_Choice
+372	21	Loaded_Language,Causal_Oversimplification
+372	23	Exaggeration-Minimisation,Loaded_Language,Causal_Oversimplification,Name_Calling-Labeling
+372	25	
+372	27	
+372	29	
+372	31	Loaded_Language
+372	33	Loaded_Language
+372	35	Appeal_to_Fear-Prejudice,Loaded_Language
+372	37	
+3720	1	
+3720	3	
+3720	5	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer
+3720	7	Appeal_to_Authority,Flag_Waving
+3720	9	
+3720	11	
+3720	13	
+3720	15	
+3720	17	Appeal_to_Authority,Flag_Waving
+3721	1	Loaded_Language
+3721	3	Name_Calling-Labeling,Loaded_Language
+3721	5	
+3721	7	Appeal_to_Fear-Prejudice,False_Dilemma-No_Choice
+3721	9	
+3721	11	Name_Calling-Labeling,Loaded_Language,Repetition
+3721	13	Appeal_to_Fear-Prejudice,Loaded_Language,False_Dilemma-No_Choice,Name_Calling-Labeling,Doubt,Causal_Oversimplification,Flag_Waving
+3721	15	
+3722	1	Name_Calling-Labeling,Loaded_Language,Repetition
+3722	3	Name_Calling-Labeling,Loaded_Language,Repetition
+3722	5	
+3722	7	Flag_Waving
+3722	9	
+3722	11	
+3722	13	Name_Calling-Labeling,Loaded_Language
+3722	15	Doubt,Loaded_Language,Repetition
+3722	17	
+3722	19	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Flag_Waving
+3722	21	
+3723	1	
+3723	3	Doubt,Loaded_Language
+3723	5	Name_Calling-Labeling,Repetition
+3723	7	Doubt
+3723	9	
+3723	11	Loaded_Language
+3723	13	Exaggeration-Minimisation,Doubt,Loaded_Language,Name_Calling-Labeling
+3724	1	Name_Calling-Labeling
+3724	3	
+3724	5	
+3724	7	Name_Calling-Labeling,Loaded_Language,Doubt,Appeal_to_Authority
+3724	9	
+3724	11	Doubt
+3724	13	Conversation_Killer,Doubt,Appeal_to_Fear-Prejudice,Loaded_Language
+3724	15	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Conversation_Killer,Flag_Waving
+3724	17	
+3724	19	
+3724	21	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+3725	1	Name_Calling-Labeling,Loaded_Language
+3725	3	Name_Calling-Labeling,Loaded_Language
+3725	5	
+3725	7	Loaded_Language,Causal_Oversimplification
+3725	9	
+3725	11	Name_Calling-Labeling,Loaded_Language
+3725	13	
+3725	15	Name_Calling-Labeling,Loaded_Language
+3725	17	
+3725	19	
+3725	21	
+3725	23	Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Appeal_to_Authority,Conversation_Killer,Causal_Oversimplification,Flag_Waving
+3726	1	
+3726	3	
+3726	5	
+3726	7	Loaded_Language
+3726	9	Flag_Waving
+3726	11	Exaggeration-Minimisation,Loaded_Language,Name_Calling-Labeling
+3726	13	
+3726	15	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition
+3726	17	Flag_Waving
+3726	19	Name_Calling-Labeling,Doubt,Loaded_Language
+3726	21	Loaded_Language
+3726	23	
+3726	25	Loaded_Language
+3726	27	Doubt
+3726	29	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+3726	31	Appeal_to_Fear-Prejudice,Loaded_Language
+3726	33	Appeal_to_Fear-Prejudice,Loaded_Language
+3726	35	
+3726	37	
+3726	39	Loaded_Language
+3726	41	
+3726	43	Loaded_Language
+3726	45	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer,Doubt
+3726	47	
+3726	49	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+3726	51	Loaded_Language
+3727	1	
+3727	3	Name_Calling-Labeling,Loaded_Language
+3727	5	Loaded_Language
+3727	7	Loaded_Language,Repetition
+3727	9	Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Guilt_by_Association,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy,Flag_Waving
+3727	11	Loaded_Language,Repetition,Name_Calling-Labeling,Doubt,Causal_Oversimplification,Flag_Waving
+3727	13	Exaggeration-Minimisation,Loaded_Language,Name_Calling-Labeling
+3727	15	Slogans,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Causal_Oversimplification
+3728	1	
+3728	3	Exaggeration-Minimisation,Loaded_Language
+3728	5	Name_Calling-Labeling,Loaded_Language,Repetition
+3728	7	Red_Herring,Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Obfuscation-Vagueness-Confusion,False_Dilemma-No_Choice,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Appeal_to_Authority,Conversation_Killer,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy,Flag_Waving
+3728	9	Exaggeration-Minimisation,Appeal_to_Fear-Prejudice,Loaded_Language,Name_Calling-Labeling
+3728	11	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Causal_Oversimplification
+3728	13	Repetition
+3729	1	
+3729	3	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Flag_Waving
+3729	5	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Conversation_Killer
+3729	7	Red_Herring,Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Whataboutism,Doubt,Causal_Oversimplification,Flag_Waving
+3729	9	
+3729	11	Repetition,Flag_Waving
+3729	13	
+3729	15	
+373	1	
+373	3	Name_Calling-Labeling,Loaded_Language
+373	5	Slogans,Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+373	7	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition
+373	9	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+3730	1	Name_Calling-Labeling,Loaded_Language
+3730	3	Name_Calling-Labeling,Loaded_Language
+3730	5	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition
+3730	7	Name_Calling-Labeling,Loaded_Language,Repetition,Flag_Waving
+3730	9	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Guilt_by_Association,Causal_Oversimplification,Flag_Waving
+3730	11	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+374	1	
+374	3	Repetition
+374	5	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Conversation_Killer,Doubt,Causal_Oversimplification
+374	7	Exaggeration-Minimisation,Loaded_Language,Appeal_to_Fear-Prejudice,Causal_Oversimplification
+374	9	
+374	11	
+374	13	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Doubt
+374	15	Appeal_to_Fear-Prejudice,Loaded_Language,False_Dilemma-No_Choice,Name_Calling-Labeling,Causal_Oversimplification
+374	17	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Doubt,Causal_Oversimplification
+375	1	Name_Calling-Labeling,Loaded_Language
+375	3	Name_Calling-Labeling,Doubt,Loaded_Language,Repetition
+375	5	Red_Herring,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Name_Calling-Labeling,Questioning_the_Reputation,Guilt_by_Association,Doubt,Flag_Waving
+375	7	
+375	9	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Guilt_by_Association,Doubt,Straw_Man,Causal_Oversimplification,Appeal_to_Hypocrisy
+375	11	Slogans,Loaded_Language,Repetition,Questioning_the_Reputation,Straw_Man,Appeal_to_Fear-Prejudice,Name_Calling-Labeling,Appeal_to_Authority,Conversation_Killer,Doubt,Appeal_to_Hypocrisy,Flag_Waving,Red_Herring,False_Dilemma-No_Choice,Whataboutism,Causal_Oversimplification,Exaggeration-Minimisation,Obfuscation-Vagueness-Confusion,Guilt_by_Association
+375	13	Name_Calling-Labeling,Doubt,Loaded_Language,Repetition
+375	15	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Name_Calling-Labeling,Conversation_Killer,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy
+375	17	Name_Calling-Labeling,Doubt,Loaded_Language,Repetition
+375	19	Red_Herring,Slogans,Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Name_Calling-Labeling,Guilt_by_Association,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy,Flag_Waving
+375	21	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,Exaggeration-Minimisation,Obfuscation-Vagueness-Confusion,Name_Calling-Labeling,Conversation_Killer,Guilt_by_Association,Doubt,Causal_Oversimplification,Appeal_to_Hypocrisy
+376	1	
+376	3	
+376	5	
+376	7	Name_Calling-Labeling,Appeal_to_Fear-Prejudice,Loaded_Language
+376	9	
+376	11	Name_Calling-Labeling,Appeal_to_Authority
+376	13	
+376	15	Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling
+376	17	Appeal_to_Fear-Prejudice,Exaggeration-Minimisation,Loaded_Language,Repetition,Name_Calling-Labeling,Appeal_to_Authority,Doubt
+376	19	
+376	21	
+376	23	Loaded_Language
+376	25	Appeal_to_Fear-Prejudice
+377	1	
+377	3	Appeal_to_Fear-Prejudice
+377	5	
+377	7	
+377	9	
+377	11	Loaded_Language
+377	13	
+377	15	Appeal_to_Fear-Prejudice,Loaded_Language
+377	17	Loaded_Language
+377	19	
+377	21	
+377	23	
+377	25	Loaded_Language,Appeal_to_Fear-Prejudice,Appeal_to_Authority
+377	27	
+377	29	
+377	31	
+378	1	
+378	3	Doubt,Loaded_Language
+378	5	Loaded_Language
+378	7	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Conversation_Killer,Doubt,Flag_Waving
+378	9	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Exaggeration-Minimisation,Questioning_the_Reputation,Name_Calling-Labeling,Conversation_Killer,Doubt,Straw_Man,Causal_Oversimplification,Appeal_to_Hypocrisy,Flag_Waving
+378	11	Doubt,Loaded_Language,Repetition
+379	1	
+379	3	Appeal_to_Fear-Prejudice,Loaded_Language,Repetition,False_Dilemma-No_Choice,Name_Calling-Labeling,Appeal_to_Authority,Conversation_Killer,Doubt,Causal_Oversimplification
+379	5	Appeal_to_Authority
+379	7	
+379	9	Loaded_Language,Repetition
+379	11	
