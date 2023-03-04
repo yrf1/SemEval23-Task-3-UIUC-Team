@@ -3,6 +3,7 @@ Running scorer locally:
 python scorers/scorer-subtask-3.py -p baselines/submission/final2-googletrans-dev-output-subtask3-en_def.txt -g data/en/dev-labels-subtask-3.txt --techniques_file_path scorers/techniques_subtask3.txt
 """
 import os
+import sys
 import copy
 import json
 import torch
@@ -21,8 +22,8 @@ lrate = 1e-5
 BATCH_SIZE = 12
 use_def = True 
 MT_augment = True
-# skip_train = sys.argv[1].lower() == 'true'
-skip_pretrain = True
+skip_pretrain = sys.argv[1].lower() == 'true'
+# skip_pretrain = True
 cross_val = False
 device = "cuda" if torch.cuda.is_available() else "cpu"
 data_dir = "data/"
